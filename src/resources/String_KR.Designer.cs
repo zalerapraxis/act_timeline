@@ -98,6 +98,15 @@ namespace ACTTimeline.resources {
         }
         
         /// <summary>
+        ///   타임라인 보기과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string _LN_ShowTimeline {
+            get {
+                return ResourceManager.GetString("_LN_ShowTimeline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   ACT 타임라인과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string _LN_Tabname {
@@ -211,6 +220,24 @@ namespace ACTTimeline.resources {
         internal static string buttonRewind {
             get {
                 return ResourceManager.GetString("buttonRewind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   자동 숨김과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string checkBoxAutohide {
+            get {
+                return ResourceManager.GetString("checkBoxAutohide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   지역이 바뀌면 자동으로 불러오기과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string checkBoxAutoloadAfterChangeZone {
+            get {
+                return ResourceManager.GetString("checkBoxAutoloadAfterChangeZone", resourceCulture);
             }
         }
         
@@ -346,6 +373,15 @@ namespace ACTTimeline.resources {
         internal static string lblList {
             get {
                 return ResourceManager.GetString("lblList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   오버레이 설정과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string lblOverlaySet {
+            get {
+                return ResourceManager.GetString("lblOverlaySet", resourceCulture);
             }
         }
         

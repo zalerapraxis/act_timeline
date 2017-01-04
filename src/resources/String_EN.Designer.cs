@@ -98,6 +98,15 @@ namespace ACTTimeline.resources {
         }
         
         /// <summary>
+        ///   Show Timeline과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string _LN_ShowTimeline {
+            get {
+                return ResourceManager.GetString("_LN_ShowTimeline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   ACT Timeline과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         public static string _LN_Tabname {

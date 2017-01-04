@@ -202,7 +202,7 @@ namespace ACTTimeline
             checkBoxShowView.Appearance = System.Windows.Forms.Appearance.Button;
             checkBoxShowView.Name = "checkBoxShowView";
             checkBoxShowView.Size = new System.Drawing.Size(90, 24);
-            checkBoxShowView.Text = "Show Timeline";
+            checkBoxShowView.Text = Translator.Get("_LN_ShowTimeline"); //"Show Timeline";
             checkBoxShowView.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             checkBoxShowView.UseVisualStyleBackColor = true;
             checkBoxShowView.Checked = true;

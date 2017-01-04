@@ -55,6 +55,10 @@
             this.labelLoadedTimeline = new System.Windows.Forms.Label();
             this.lblInfo = new System.Windows.Forms.Label();
             this.tabOption = new System.Windows.Forms.TabPage();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.buttonFontSelect = new System.Windows.Forms.Button();
+            this.labelFont = new System.Windows.Forms.Label();
+            this.lblOverlaySet = new System.Windows.Forms.Label();
             this.checkBoxAutohide = new System.Windows.Forms.CheckBox();
             this.checkBoxAutoloadAfterChangeZone = new System.Windows.Forms.CheckBox();
             this.trackBarOpacity = new System.Windows.Forms.TrackBar();
@@ -65,12 +69,10 @@
             this.labelNumRows = new System.Windows.Forms.Label();
             this.labelOverlayY = new System.Windows.Forms.Label();
             this.labelOpacity = new System.Windows.Forms.Label();
-            this.buttonFontSelect = new System.Windows.Forms.Button();
             this.labelCurrOpacity = new System.Windows.Forms.Label();
             this.labelBar = new System.Windows.Forms.Label();
             this.labelColumnSize = new System.Windows.Forms.Label();
             this.labelTextWidth = new System.Windows.Forms.Label();
-            this.labelFont = new System.Windows.Forms.Label();
             this.labelOverlayX = new System.Windows.Forms.Label();
             this.udOverlayY = new System.Windows.Forms.NumericUpDown();
             this.udOverlayX = new System.Windows.Forms.NumericUpDown();
@@ -85,6 +87,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar)).BeginInit();
             this.panel1.SuspendLayout();
             this.tabOption.SuspendLayout();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarOpacity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.udOverlayY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.udOverlayX)).BeginInit();
@@ -99,7 +102,7 @@
             this.tabControlExt1.Controls.Add(this.tabMain);
             this.tabControlExt1.Controls.Add(this.tabOption);
             this.tabControlExt1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlExt1.ItemSize = new System.Drawing.Size(30, 110);
+            this.tabControlExt1.ItemSize = new System.Drawing.Size(30, 160);
             this.tabControlExt1.Location = new System.Drawing.Point(0, 0);
             this.tabControlExt1.Multiline = true;
             this.tabControlExt1.Name = "tabControlExt1";
@@ -119,10 +122,10 @@
             this.tabMain.Controls.Add(this.lblCtrl);
             this.tabMain.Controls.Add(this.panel1);
             this.tabMain.Controls.Add(this.lblInfo);
-            this.tabMain.Location = new System.Drawing.Point(114, 4);
+            this.tabMain.Location = new System.Drawing.Point(164, 4);
             this.tabMain.Name = "tabMain";
             this.tabMain.Padding = new System.Windows.Forms.Padding(2);
-            this.tabMain.Size = new System.Drawing.Size(864, 624);
+            this.tabMain.Size = new System.Drawing.Size(814, 624);
             this.tabMain.TabIndex = 0;
             this.tabMain.Text = "tabMain";
             this.tabMain.Click += new System.EventHandler(this.tabPage1_Click);
@@ -136,7 +139,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(2, 269);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(860, 353);
+            this.panel4.Size = new System.Drawing.Size(810, 353);
             this.panel4.TabIndex = 12;
             // 
             // ListItems
@@ -149,13 +152,13 @@
             this.ListItems.Location = new System.Drawing.Point(9, 10);
             this.ListItems.Name = "ListItems";
             this.ListItems.Padding = new System.Windows.Forms.Padding(2);
-            this.ListItems.Size = new System.Drawing.Size(732, 334);
+            this.ListItems.Size = new System.Drawing.Size(682, 334);
             this.ListItems.TabIndex = 2;
             // 
             // buttonResourceDirOpen
             // 
             this.buttonResourceDirOpen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonResourceDirOpen.Location = new System.Drawing.Point(747, 10);
+            this.buttonResourceDirOpen.Location = new System.Drawing.Point(697, 10);
             this.buttonResourceDirOpen.Name = "buttonResourceDirOpen";
             this.buttonResourceDirOpen.Size = new System.Drawing.Size(104, 25);
             this.buttonResourceDirOpen.TabIndex = 0;
@@ -166,7 +169,7 @@
             // buttonLoad
             // 
             this.buttonLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonLoad.Location = new System.Drawing.Point(747, 72);
+            this.buttonLoad.Location = new System.Drawing.Point(697, 72);
             this.buttonLoad.Name = "buttonLoad";
             this.buttonLoad.Size = new System.Drawing.Size(104, 25);
             this.buttonLoad.TabIndex = 1;
@@ -177,7 +180,7 @@
             // buttonRefreshList
             // 
             this.buttonRefreshList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRefreshList.Location = new System.Drawing.Point(747, 41);
+            this.buttonRefreshList.Location = new System.Drawing.Point(697, 41);
             this.buttonRefreshList.Name = "buttonRefreshList";
             this.buttonRefreshList.Size = new System.Drawing.Size(104, 25);
             this.buttonRefreshList.TabIndex = 1;
@@ -191,7 +194,7 @@
             this.labelResourceDirStatus.Location = new System.Drawing.Point(2, 245);
             this.labelResourceDirStatus.Name = "labelResourceDirStatus";
             this.labelResourceDirStatus.Padding = new System.Windows.Forms.Padding(5);
-            this.labelResourceDirStatus.Size = new System.Drawing.Size(860, 24);
+            this.labelResourceDirStatus.Size = new System.Drawing.Size(810, 24);
             this.labelResourceDirStatus.TabIndex = 3;
             this.labelResourceDirStatus.Text = "Resource Dir Status";
             this.labelResourceDirStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -205,7 +208,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(2, 207);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(860, 38);
+            this.panel3.Size = new System.Drawing.Size(810, 38);
             this.panel3.TabIndex = 11;
             // 
             // labelResourceDir
@@ -223,14 +226,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxResourceDir.Location = new System.Drawing.Point(156, 8);
             this.textBoxResourceDir.Name = "textBoxResourceDir";
-            this.textBoxResourceDir.Size = new System.Drawing.Size(615, 21);
+            this.textBoxResourceDir.Size = new System.Drawing.Size(565, 21);
             this.textBoxResourceDir.TabIndex = 1;
             this.textBoxResourceDir.TextChanged += new System.EventHandler(this.textBoxResourceDir_TextChanged);
             // 
             // buttonResourceDirSelect
             // 
             this.buttonResourceDirSelect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonResourceDirSelect.Location = new System.Drawing.Point(777, 7);
+            this.buttonResourceDirSelect.Location = new System.Drawing.Point(727, 7);
             this.buttonResourceDirSelect.Name = "buttonResourceDirSelect";
             this.buttonResourceDirSelect.Size = new System.Drawing.Size(75, 23);
             this.buttonResourceDirSelect.TabIndex = 0;
@@ -245,7 +248,7 @@
             this.lblList.Location = new System.Drawing.Point(2, 183);
             this.lblList.Name = "lblList";
             this.lblList.Padding = new System.Windows.Forms.Padding(5);
-            this.lblList.Size = new System.Drawing.Size(860, 24);
+            this.lblList.Size = new System.Drawing.Size(810, 24);
             this.lblList.TabIndex = 10;
             this.lblList.Text = "Timeline List";
             this.lblList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -262,7 +265,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(2, 82);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(860, 101);
+            this.panel2.Size = new System.Drawing.Size(810, 101);
             this.panel2.TabIndex = 9;
             // 
             // trackBar
@@ -272,7 +275,7 @@
             this.trackBar.AutoSize = false;
             this.trackBar.Location = new System.Drawing.Point(11, 12);
             this.trackBar.Name = "trackBar";
-            this.trackBar.Size = new System.Drawing.Size(837, 45);
+            this.trackBar.Size = new System.Drawing.Size(787, 45);
             this.trackBar.TabIndex = 0;
             this.trackBar.TickFrequency = 30;
             this.trackBar.Scroll += new System.EventHandler(this.trackbar_Scroll);
@@ -343,7 +346,7 @@
             this.lblCtrl.Location = new System.Drawing.Point(2, 58);
             this.lblCtrl.Name = "lblCtrl";
             this.lblCtrl.Padding = new System.Windows.Forms.Padding(5);
-            this.lblCtrl.Size = new System.Drawing.Size(860, 24);
+            this.lblCtrl.Size = new System.Drawing.Size(810, 24);
             this.lblCtrl.TabIndex = 8;
             this.lblCtrl.Text = "Timeline Control";
             this.lblCtrl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -355,7 +358,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(2, 26);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(860, 32);
+            this.panel1.Size = new System.Drawing.Size(810, 32);
             this.panel1.TabIndex = 7;
             // 
             // labelLoadedTimelineLabel
@@ -383,7 +386,7 @@
             this.lblInfo.Location = new System.Drawing.Point(2, 2);
             this.lblInfo.Name = "lblInfo";
             this.lblInfo.Padding = new System.Windows.Forms.Padding(5);
-            this.lblInfo.Size = new System.Drawing.Size(860, 24);
+            this.lblInfo.Size = new System.Drawing.Size(810, 24);
             this.lblInfo.TabIndex = 6;
             this.lblInfo.Text = "Timeline Information";
             this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -391,6 +394,8 @@
             // tabOption
             // 
             this.tabOption.BackColor = System.Drawing.Color.White;
+            this.tabOption.Controls.Add(this.panel5);
+            this.tabOption.Controls.Add(this.lblOverlaySet);
             this.tabOption.Controls.Add(this.checkBoxAutohide);
             this.tabOption.Controls.Add(this.checkBoxAutoloadAfterChangeZone);
             this.tabOption.Controls.Add(this.trackBarOpacity);
@@ -401,31 +406,73 @@
             this.tabOption.Controls.Add(this.labelNumRows);
             this.tabOption.Controls.Add(this.labelOverlayY);
             this.tabOption.Controls.Add(this.labelOpacity);
-            this.tabOption.Controls.Add(this.buttonFontSelect);
             this.tabOption.Controls.Add(this.labelCurrOpacity);
             this.tabOption.Controls.Add(this.labelBar);
             this.tabOption.Controls.Add(this.labelColumnSize);
             this.tabOption.Controls.Add(this.labelTextWidth);
-            this.tabOption.Controls.Add(this.labelFont);
             this.tabOption.Controls.Add(this.labelOverlayX);
             this.tabOption.Controls.Add(this.udOverlayY);
             this.tabOption.Controls.Add(this.udOverlayX);
             this.tabOption.Controls.Add(this.udBarWidth);
             this.tabOption.Controls.Add(this.udNumRows);
             this.tabOption.Controls.Add(this.udTextWidth);
-            this.tabOption.Location = new System.Drawing.Point(114, 4);
+            this.tabOption.Location = new System.Drawing.Point(164, 4);
             this.tabOption.Name = "tabOption";
-            this.tabOption.Padding = new System.Windows.Forms.Padding(3);
-            this.tabOption.Size = new System.Drawing.Size(864, 624);
+            this.tabOption.Padding = new System.Windows.Forms.Padding(2);
+            this.tabOption.Size = new System.Drawing.Size(814, 624);
             this.tabOption.TabIndex = 1;
             this.tabOption.Text = "tabOption";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.buttonFontSelect);
+            this.panel5.Controls.Add(this.labelFont);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(2, 26);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(810, 34);
+            this.panel5.TabIndex = 8;
+            // 
+            // buttonFontSelect
+            // 
+            this.buttonFontSelect.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonFontSelect.Location = new System.Drawing.Point(63, 3);
+            this.buttonFontSelect.Name = "buttonFontSelect";
+            this.buttonFontSelect.Size = new System.Drawing.Size(744, 28);
+            this.buttonFontSelect.TabIndex = 0;
+            this.buttonFontSelect.Text = "Select Font";
+            this.buttonFontSelect.UseVisualStyleBackColor = true;
+            this.buttonFontSelect.Click += new System.EventHandler(this.buttonFontSelect_Click);
+            // 
+            // labelFont
+            // 
+            this.labelFont.AutoSize = true;
+            this.labelFont.Location = new System.Drawing.Point(9, 10);
+            this.labelFont.Name = "labelFont";
+            this.labelFont.Size = new System.Drawing.Size(33, 12);
+            this.labelFont.TabIndex = 0;
+            this.labelFont.Text = "Font:";
+            // 
+            // lblOverlaySet
+            // 
+            this.lblOverlaySet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblOverlaySet.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblOverlaySet.Location = new System.Drawing.Point(2, 2);
+            this.lblOverlaySet.Name = "lblOverlaySet";
+            this.lblOverlaySet.Padding = new System.Windows.Forms.Padding(5);
+            this.lblOverlaySet.Size = new System.Drawing.Size(810, 24);
+            this.lblOverlaySet.TabIndex = 7;
+            this.lblOverlaySet.Text = "Timeline Overlay Setting";
+            this.lblOverlaySet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // checkBoxAutohide
             // 
             this.checkBoxAutohide.AutoSize = true;
             this.checkBoxAutohide.Checked = true;
             this.checkBoxAutohide.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxAutohide.Location = new System.Drawing.Point(12, 101);
+            this.checkBoxAutohide.Location = new System.Drawing.Point(13, 401);
             this.checkBoxAutohide.Name = "checkBoxAutohide";
             this.checkBoxAutohide.Size = new System.Drawing.Size(77, 16);
             this.checkBoxAutohide.TabIndex = 5;
@@ -436,7 +483,7 @@
             // checkBoxAutoloadAfterChangeZone
             // 
             this.checkBoxAutoloadAfterChangeZone.AutoSize = true;
-            this.checkBoxAutoloadAfterChangeZone.Location = new System.Drawing.Point(12, 35);
+            this.checkBoxAutoloadAfterChangeZone.Location = new System.Drawing.Point(13, 335);
             this.checkBoxAutoloadAfterChangeZone.Name = "checkBoxAutoloadAfterChangeZone";
             this.checkBoxAutoloadAfterChangeZone.Size = new System.Drawing.Size(179, 16);
             this.checkBoxAutoloadAfterChangeZone.TabIndex = 4;
@@ -446,7 +493,7 @@
             // 
             // trackBarOpacity
             // 
-            this.trackBarOpacity.Location = new System.Drawing.Point(186, 269);
+            this.trackBarOpacity.Location = new System.Drawing.Point(10, 263);
             this.trackBarOpacity.Maximum = 100;
             this.trackBarOpacity.Minimum = 1;
             this.trackBarOpacity.Name = "trackBarOpacity";
@@ -461,7 +508,7 @@
             this.checkBoxPlaySoundByACT.AutoSize = true;
             this.checkBoxPlaySoundByACT.Checked = true;
             this.checkBoxPlaySoundByACT.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxPlaySoundByACT.Location = new System.Drawing.Point(12, 13);
+            this.checkBoxPlaySoundByACT.Location = new System.Drawing.Point(13, 313);
             this.checkBoxPlaySoundByACT.Name = "checkBoxPlaySoundByACT";
             this.checkBoxPlaySoundByACT.Size = new System.Drawing.Size(135, 16);
             this.checkBoxPlaySoundByACT.TabIndex = 3;
@@ -474,7 +521,7 @@
             this.checkBoxShowOverlayButtons.AutoSize = true;
             this.checkBoxShowOverlayButtons.Checked = true;
             this.checkBoxShowOverlayButtons.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxShowOverlayButtons.Location = new System.Drawing.Point(12, 79);
+            this.checkBoxShowOverlayButtons.Location = new System.Drawing.Point(13, 379);
             this.checkBoxShowOverlayButtons.Name = "checkBoxShowOverlayButtons";
             this.checkBoxShowOverlayButtons.Size = new System.Drawing.Size(175, 16);
             this.checkBoxShowOverlayButtons.TabIndex = 3;
@@ -485,7 +532,7 @@
             // labelOverlayOrientation
             // 
             this.labelOverlayOrientation.AutoSize = true;
-            this.labelOverlayOrientation.Location = new System.Drawing.Point(10, 179);
+            this.labelOverlayOrientation.Location = new System.Drawing.Point(7, 68);
             this.labelOverlayOrientation.Name = "labelOverlayOrientation";
             this.labelOverlayOrientation.Size = new System.Drawing.Size(112, 12);
             this.labelOverlayOrientation.TabIndex = 0;
@@ -496,7 +543,7 @@
             this.checkBoxMoveOverlayByDrag.AutoSize = true;
             this.checkBoxMoveOverlayByDrag.Checked = true;
             this.checkBoxMoveOverlayByDrag.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxMoveOverlayByDrag.Location = new System.Drawing.Point(12, 57);
+            this.checkBoxMoveOverlayByDrag.Location = new System.Drawing.Point(13, 357);
             this.checkBoxMoveOverlayByDrag.Name = "checkBoxMoveOverlayByDrag";
             this.checkBoxMoveOverlayByDrag.Size = new System.Drawing.Size(256, 16);
             this.checkBoxMoveOverlayByDrag.TabIndex = 3;
@@ -507,7 +554,7 @@
             // labelNumRows
             // 
             this.labelNumRows.AutoSize = true;
-            this.labelNumRows.Location = new System.Drawing.Point(10, 207);
+            this.labelNumRows.Location = new System.Drawing.Point(7, 187);
             this.labelNumRows.Name = "labelNumRows";
             this.labelNumRows.Size = new System.Drawing.Size(159, 12);
             this.labelNumRows.TabIndex = 0;
@@ -516,7 +563,7 @@
             // labelOverlayY
             // 
             this.labelOverlayY.AutoSize = true;
-            this.labelOverlayY.Location = new System.Drawing.Point(294, 179);
+            this.labelOverlayY.Location = new System.Drawing.Point(161, 91);
             this.labelOverlayY.Name = "labelOverlayY";
             this.labelOverlayY.Size = new System.Drawing.Size(17, 12);
             this.labelOverlayY.TabIndex = 2;
@@ -525,26 +572,16 @@
             // labelOpacity
             // 
             this.labelOpacity.AutoSize = true;
-            this.labelOpacity.Location = new System.Drawing.Point(10, 273);
+            this.labelOpacity.Location = new System.Drawing.Point(7, 247);
             this.labelOpacity.Name = "labelOpacity";
             this.labelOpacity.Size = new System.Drawing.Size(52, 12);
             this.labelOpacity.TabIndex = 0;
             this.labelOpacity.Text = "Opacity:";
             // 
-            // buttonFontSelect
-            // 
-            this.buttonFontSelect.Location = new System.Drawing.Point(49, 134);
-            this.buttonFontSelect.Name = "buttonFontSelect";
-            this.buttonFontSelect.Size = new System.Drawing.Size(486, 28);
-            this.buttonFontSelect.TabIndex = 0;
-            this.buttonFontSelect.Text = "Select Font";
-            this.buttonFontSelect.UseVisualStyleBackColor = true;
-            this.buttonFontSelect.Click += new System.EventHandler(this.buttonFontSelect_Click);
-            // 
             // labelCurrOpacity
             // 
             this.labelCurrOpacity.AutoSize = true;
-            this.labelCurrOpacity.Location = new System.Drawing.Point(466, 273);
+            this.labelCurrOpacity.Location = new System.Drawing.Point(291, 268);
             this.labelCurrOpacity.Name = "labelCurrOpacity";
             this.labelCurrOpacity.Size = new System.Drawing.Size(27, 12);
             this.labelCurrOpacity.TabIndex = 0;
@@ -553,7 +590,7 @@
             // labelBar
             // 
             this.labelBar.AutoSize = true;
-            this.labelBar.Location = new System.Drawing.Point(294, 238);
+            this.labelBar.Location = new System.Drawing.Point(161, 151);
             this.labelBar.Name = "labelBar";
             this.labelBar.Size = new System.Drawing.Size(28, 12);
             this.labelBar.TabIndex = 2;
@@ -563,7 +600,7 @@
             // labelColumnSize
             // 
             this.labelColumnSize.AutoSize = true;
-            this.labelColumnSize.Location = new System.Drawing.Point(10, 238);
+            this.labelColumnSize.Location = new System.Drawing.Point(7, 128);
             this.labelColumnSize.Name = "labelColumnSize";
             this.labelColumnSize.Size = new System.Drawing.Size(83, 12);
             this.labelColumnSize.TabIndex = 0;
@@ -572,26 +609,17 @@
             // labelTextWidth
             // 
             this.labelTextWidth.AutoSize = true;
-            this.labelTextWidth.Location = new System.Drawing.Point(143, 238);
+            this.labelTextWidth.Location = new System.Drawing.Point(10, 151);
             this.labelTextWidth.Name = "labelTextWidth";
             this.labelTextWidth.Size = new System.Drawing.Size(34, 12);
             this.labelTextWidth.TabIndex = 2;
             this.labelTextWidth.Text = "Text:";
             this.labelTextWidth.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // labelFont
-            // 
-            this.labelFont.AutoSize = true;
-            this.labelFont.Location = new System.Drawing.Point(10, 142);
-            this.labelFont.Name = "labelFont";
-            this.labelFont.Size = new System.Drawing.Size(33, 12);
-            this.labelFont.TabIndex = 0;
-            this.labelFont.Text = "Font:";
-            // 
             // labelOverlayX
             // 
             this.labelOverlayX.AutoSize = true;
-            this.labelOverlayX.Location = new System.Drawing.Point(163, 179);
+            this.labelOverlayX.Location = new System.Drawing.Point(30, 91);
             this.labelOverlayX.Name = "labelOverlayX";
             this.labelOverlayX.Size = new System.Drawing.Size(17, 12);
             this.labelOverlayX.TabIndex = 2;
@@ -599,7 +627,7 @@
             // 
             // udOverlayY
             // 
-            this.udOverlayY.Location = new System.Drawing.Point(335, 177);
+            this.udOverlayY.Location = new System.Drawing.Point(203, 90);
             this.udOverlayY.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -622,7 +650,7 @@
             // 
             // udOverlayX
             // 
-            this.udOverlayX.Location = new System.Drawing.Point(186, 177);
+            this.udOverlayX.Location = new System.Drawing.Point(54, 90);
             this.udOverlayX.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -650,7 +678,7 @@
             0,
             0,
             0});
-            this.udBarWidth.Location = new System.Drawing.Point(335, 236);
+            this.udBarWidth.Location = new System.Drawing.Point(203, 150);
             this.udBarWidth.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -673,9 +701,9 @@
             // 
             // udNumRows
             // 
-            this.udNumRows.Location = new System.Drawing.Point(186, 205);
+            this.udNumRows.Location = new System.Drawing.Point(54, 210);
             this.udNumRows.Name = "udNumRows";
-            this.udNumRows.Size = new System.Drawing.Size(47, 21);
+            this.udNumRows.Size = new System.Drawing.Size(93, 21);
             this.udNumRows.TabIndex = 1;
             this.udNumRows.Value = new decimal(new int[] {
             3,
@@ -691,7 +719,7 @@
             0,
             0,
             0});
-            this.udTextWidth.Location = new System.Drawing.Point(186, 236);
+            this.udTextWidth.Location = new System.Drawing.Point(54, 150);
             this.udTextWidth.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -730,6 +758,8 @@
             this.panel1.PerformLayout();
             this.tabOption.ResumeLayout(false);
             this.tabOption.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarOpacity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.udOverlayY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.udOverlayX)).EndInit();
@@ -791,5 +821,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel ListItems;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label lblOverlaySet;
     }
 }

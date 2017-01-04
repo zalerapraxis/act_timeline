@@ -182,6 +182,7 @@ namespace ACTTimeline
                 btn.Appearance = Appearance.Button;
                 btn.Click += Btn_CheckedChanged;
                 btn.Dock = DockStyle.Top;
+                btn.BackColor = Color.Transparent;
                 ListItems.Controls.Add(btn);
             }
         }

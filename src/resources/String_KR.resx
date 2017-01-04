@@ -220,4 +220,16 @@
   <data name="_LN_WavNotFound" xml:space="preserve">
     <value> 사운드 폴더를 찾을 수 없습니다.</value>
   </data>
+  <data name="checkBoxAutohide" xml:space="preserve">
+    <value>자동 숨김</value>
+  </data>
+  <data name="checkBoxAutoloadAfterChangeZone" xml:space="preserve">
+    <value>지역이 바뀌면 자동으로 불러오기</value>
+  </data>
+  <data name="lblOverlaySet" xml:space="preserve">
+    <value>오버레이 설정</value>
+  </data>
+  <data name="_LN_ShowTimeline" xml:space="preserve">
+    <value>타임라인 보기</value>
+  </data>
 </root>

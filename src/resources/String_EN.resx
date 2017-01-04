@@ -211,4 +211,7 @@
   <data name="_LN_WavNotFound" xml:space="preserve">
     <value> Sound files dir not found!</value>
   </data>
+  <data name="_LN_ShowTimeline" xml:space="preserve">
+    <value>Show Timeline</value>
+  </data>
 </root>

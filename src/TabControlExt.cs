@@ -58,7 +58,7 @@ namespace ACTTimeline
 
             DoubleBuffered = true;
 
-            ItemSize = new Size(30, 110);
+            ItemSize = new Size(30, 160);
             SizeMode = TabSizeMode.Fixed;
         }
     }
