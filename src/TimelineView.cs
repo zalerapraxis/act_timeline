@@ -310,6 +310,20 @@ namespace ACTTimeline
 
             alert.Processed = true;
         }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // TimelineView
+            // 
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Name = "TimelineView";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.ResumeLayout(false);
+
+        }
     }
 
     class TimeLeftColumn : DataGridViewColumn
