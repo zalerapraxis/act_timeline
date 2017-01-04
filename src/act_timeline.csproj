@@ -53,7 +53,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\Debug_bin\</OutputPath>
+    <OutputPath>E:\Advanced Combat Tracker\Plugins\ACT.Timeline\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>x86</PlatformTarget>
@@ -61,7 +61,7 @@
     <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
-    <OutputPath>..\bin\</OutputPath>
+    <OutputPath>E:\Advanced Combat Tracker\Plugins\ACT.Timeline\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
@@ -93,6 +93,9 @@
     <Compile Include="PluginSettings.cs" />
     <Compile Include="CachedSoundPlayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TabControlExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="TimelineController.cs" />
     <Compile Include="TimelineLoader.cs" />
     <Compile Include="TimelineView.cs">
@@ -102,6 +105,12 @@
     <Compile Include="Win32APIUtils.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ACTTabPageControl.ko-KR.resx">
+      <DependentUpon>ACTTabPageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ACTTabPageControl.ko.resx">
+      <DependentUpon>ACTTabPageControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ACTTabPageControl.resx">
       <DependentUpon>ACTTabPageControl.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -136,14 +145,16 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Advanced Combat Tracker">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Advanced Combat Tracker\Advanced Combat Tracker.exe</HintPath>
+      <HintPath>E:\Advanced Combat Tracker\Advanced Combat Tracker.exe</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="LibZ.Bootstrap">
-      <HintPath>packages\LibZ.Bootstrap.1.1.0.2\lib\net40-client\LibZ.Bootstrap.dll</HintPath>
+    <Reference Include="LibZ.Bootstrap, Version=1.2.0.0, Culture=neutral, PublicKeyToken=62360e53307d6ba2, processorArchitecture=MSIL">
+      <HintPath>packages\LibZ.Bootstrap.1.2.0.0\lib\net4-client\LibZ.Bootstrap.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Sprache">
-      <HintPath>packages\Sprache.1.10.0.36\lib\net40\Sprache.dll</HintPath>
+    <Reference Include="Sprache, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Sprache.2.1.0\lib\net40\Sprache.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
@@ -156,15 +167,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>set LIBZ="$(SolutionDir)packages\LibZ.Bootstrap.1.1.0.2\tools\libz.exe"
-set EXE_7ZA="$(SolutionDir)packages\7ZipCLI.9.20.0\tools\7za.exe"
-if $(ConfigurationName) == Release (
-%25LIBZ%25 inject-dll --assembly $(TargetName).dll --include *.dll --exclude  $(TargetName).dll --move
-cd $(TargetDir)..\
-%25EXE_7ZA%25 a act_timeline.zip bin\BindingCoil.ACTTimeline.dll resources
-) ELSE (
-echo "no post build on Debug"
-)</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
