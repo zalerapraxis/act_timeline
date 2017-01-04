@@ -270,5 +270,10 @@ namespace ACTTimeline
         {
             plugin.TimelineView.PlaySoundByACT = checkBoxPlaySoundByACT.Checked;
         }
+
+        private void ACTTabPageControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

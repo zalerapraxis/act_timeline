@@ -467,6 +467,7 @@
             this.Controls.Add(this.tabControlExt1);
             this.Name = "ACTTabPageControl";
             resources.ApplyResources(this, "$this");
+            this.Load += new System.EventHandler(this.ACTTabPageControl_Load);
             this.tabControlExt1.ResumeLayout(false);
             this.tabMain.ResumeLayout(false);
             this.tabMain.PerformLayout();

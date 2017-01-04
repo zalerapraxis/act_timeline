@@ -125,6 +125,9 @@
   <data name="labelEndPos.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="labelEndPos.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="labelEndPos.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 69</value>
@@ -156,6 +159,9 @@
   <data name="labelSlash.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="labelSlash.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="labelSlash.Location" type="System.Drawing.Point, System.Drawing">
     <value>56, 69</value>
   </data>
@@ -179,6 +185,9 @@
   </data>
   <data name="&gt;&gt;labelSlash.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="buttonPlay.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="buttonPlay.Location" type="System.Drawing.Point, System.Drawing">
     <value>232, 91</value>
@@ -206,6 +215,9 @@
   </data>
   <data name="labelCurrPos.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="labelCurrPos.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="labelCurrPos.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 69</value>
@@ -237,6 +249,9 @@
   <data name="buttonPause.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="buttonPause.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="buttonPause.Location" type="System.Drawing.Point, System.Drawing">
     <value>125, 91</value>
   </data>
@@ -267,6 +282,9 @@
   <data name="buttonResourceDirSelect.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
+  <data name="buttonResourceDirSelect.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="buttonResourceDirSelect.Location" type="System.Drawing.Point, System.Drawing">
     <value>496, 18</value>
   </data>
@@ -294,6 +312,9 @@
   <data name="buttonResourceDirOpen.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
+  <data name="buttonResourceDirOpen.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="buttonResourceDirOpen.Location" type="System.Drawing.Point, System.Drawing">
     <value>496, 131</value>
   </data>
@@ -317,6 +338,9 @@
   </data>
   <data name="&gt;&gt;buttonResourceDirOpen.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="labelResourceDir.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="labelResourceDir.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 18</value>
@@ -348,6 +372,9 @@
   <data name="labelResourceDirStatus.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
+  <data name="labelResourceDirStatus.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="labelResourceDirStatus.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 45</value>
   </data>
@@ -374,6 +401,9 @@
   </data>
   <data name="buttonRefreshList.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
+  </data>
+  <data name="buttonRefreshList.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="buttonRefreshList.Location" type="System.Drawing.Point, System.Drawing">
     <value>496, 100</value>
@@ -425,6 +455,9 @@
   </data>
   <data name="buttonLoad.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
+  </data>
+  <data name="buttonLoad.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="buttonLoad.Location" type="System.Drawing.Point, System.Drawing">
     <value>496, 69</value>
@@ -501,6 +534,9 @@
   <data name="&gt;&gt;groupBoxTimelines.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="buttonRewind.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="buttonRewind.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 91</value>
   </data>
@@ -528,6 +564,9 @@
   <data name="trackBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
+  <data name="trackBar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="trackBar.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 40</value>
   </data>
@@ -551,6 +590,9 @@
   </data>
   <data name="labelLoadedTimelineLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="labelLoadedTimelineLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="labelLoadedTimelineLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 11</value>
@@ -578,6 +620,9 @@
   </data>
   <data name="labelLoadedTimeline.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="labelLoadedTimeline.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="labelLoadedTimeline.Location" type="System.Drawing.Point, System.Drawing">
     <value>125, 11</value>
@@ -630,6 +675,9 @@
   <data name="checkBoxShowOverlayButtons.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="checkBoxShowOverlayButtons.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="checkBoxShowOverlayButtons.Location" type="System.Drawing.Point, System.Drawing">
     <value>17, 67</value>
   </data>
@@ -657,6 +705,9 @@
   <data name="trackBarOpacity.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="trackBarOpacity.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="trackBarOpacity.Location" type="System.Drawing.Point, System.Drawing">
     <value>190, 196</value>
   </data>
@@ -680,6 +731,9 @@
   </data>
   <data name="checkBoxMoveOverlayByDrag.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="checkBoxMoveOverlayByDrag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="checkBoxMoveOverlayByDrag.Location" type="System.Drawing.Point, System.Drawing">
     <value>17, 41</value>
@@ -708,6 +762,9 @@
   <data name="checkBoxPlaySoundByACT.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="checkBoxPlaySoundByACT.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="checkBoxPlaySoundByACT.Location" type="System.Drawing.Point, System.Drawing">
     <value>17, 15</value>
   </data>
@@ -734,6 +791,9 @@
   </data>
   <data name="labelCurrentFont.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="labelCurrentFont.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="labelCurrentFont.Location" type="System.Drawing.Point, System.Drawing">
     <value>59, 233</value>
@@ -762,6 +822,9 @@
   <data name="labelFont.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="labelFont.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="labelFont.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 233</value>
   </data>
@@ -785,6 +848,9 @@
   </data>
   <data name="&gt;&gt;labelFont.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="buttonFontSelect.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="buttonFontSelect.Location" type="System.Drawing.Point, System.Drawing">
     <value>17, 262</value>
@@ -813,6 +879,9 @@
   <data name="labelOverlayOrientation.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="labelOverlayOrientation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="labelOverlayOrientation.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 103</value>
   </data>
@@ -839,6 +908,9 @@
   </data>
   <data name="labelOverlayY.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="labelOverlayY.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="labelOverlayY.Location" type="System.Drawing.Point, System.Drawing">
     <value>298, 103</value>
@@ -867,6 +939,9 @@
   <data name="labelNumRows.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="labelNumRows.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="labelNumRows.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 134</value>
   </data>
@@ -894,6 +969,9 @@
   <data name="labelOpacity.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="labelOpacity.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="labelOpacity.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 200</value>
   </data>
@@ -920,6 +998,9 @@
   </data>
   <data name="labelBar.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="labelBar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="labelBar.Location" type="System.Drawing.Point, System.Drawing">
     <value>298, 165</value>
@@ -951,6 +1032,9 @@
   <data name="labelCurrOpacity.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="labelCurrOpacity.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="labelCurrOpacity.Location" type="System.Drawing.Point, System.Drawing">
     <value>470, 200</value>
   </data>
@@ -977,6 +1061,9 @@
   </data>
   <data name="labelTextWidth.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="labelTextWidth.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="labelTextWidth.Location" type="System.Drawing.Point, System.Drawing">
     <value>147, 165</value>
@@ -1008,6 +1095,9 @@
   <data name="labelColumnSize.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="labelColumnSize.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="labelColumnSize.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 165</value>
   </data>
@@ -1034,6 +1124,9 @@
   </data>
   <data name="labelOverlayX.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="labelOverlayX.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="labelOverlayX.Location" type="System.Drawing.Point, System.Drawing">
     <value>167, 103</value>
