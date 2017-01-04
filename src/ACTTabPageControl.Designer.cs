@@ -28,522 +28,70 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonResourceDirSelect = new System.Windows.Forms.Button();
-            this.textBoxResourceDir = new System.Windows.Forms.TextBox();
-            this.labelResourceDir = new System.Windows.Forms.Label();
-            this.checkBoxAutoloadAfterChangeZone = new System.Windows.Forms.CheckBox();
-            this.labelResourceDirStatus = new System.Windows.Forms.Label();
-            this.checkBoxPlaySoundByACT = new System.Windows.Forms.CheckBox();
-            this.buttonResourceDirOpen = new System.Windows.Forms.Button();
-            this.buttonRefreshList = new System.Windows.Forms.Button();
-            this.buttonLoad = new System.Windows.Forms.Button();
-            this.checkBoxAutohide = new System.Windows.Forms.CheckBox();
-            this.trackBarOpacity = new System.Windows.Forms.TrackBar();
-            this.checkBoxShowOverlayButtons = new System.Windows.Forms.CheckBox();
-            this.checkBoxMoveOverlayByDrag = new System.Windows.Forms.CheckBox();
-            this.labelOverlayY = new System.Windows.Forms.Label();
-            this.buttonFontSelect = new System.Windows.Forms.Button();
-            this.labelBar = new System.Windows.Forms.Label();
-            this.labelTextWidth = new System.Windows.Forms.Label();
-            this.labelOverlayX = new System.Windows.Forms.Label();
-            this.udOverlayY = new System.Windows.Forms.NumericUpDown();
-            this.udBarWidth = new System.Windows.Forms.NumericUpDown();
-            this.udTextWidth = new System.Windows.Forms.NumericUpDown();
-            this.udNumRows = new System.Windows.Forms.NumericUpDown();
-            this.udOverlayX = new System.Windows.Forms.NumericUpDown();
-            this.labelFont = new System.Windows.Forms.Label();
-            this.labelColumnSize = new System.Windows.Forms.Label();
-            this.labelCurrOpacity = new System.Windows.Forms.Label();
-            this.labelOpacity = new System.Windows.Forms.Label();
-            this.labelNumRows = new System.Windows.Forms.Label();
-            this.labelOverlayOrientation = new System.Windows.Forms.Label();
-            this.labelSlash = new System.Windows.Forms.Label();
-            this.buttonPause = new System.Windows.Forms.Button();
-            this.buttonPlay = new System.Windows.Forms.Button();
-            this.buttonRewind = new System.Windows.Forms.Button();
-            this.labelEndPos = new System.Windows.Forms.Label();
-            this.labelCurrPos = new System.Windows.Forms.Label();
-            this.labelLoadedTimeline = new System.Windows.Forms.Label();
-            this.labelLoadedTimelineLabel = new System.Windows.Forms.Label();
-            this.trackBar = new System.Windows.Forms.TrackBar();
             this.tabControlExt1 = new ACTTimeline.TabControlExt();
             this.tabMain = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
             this.ListItems = new System.Windows.Forms.Panel();
+            this.buttonResourceDirOpen = new System.Windows.Forms.Button();
+            this.buttonLoad = new System.Windows.Forms.Button();
+            this.buttonRefreshList = new System.Windows.Forms.Button();
+            this.labelResourceDirStatus = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.labelResourceDir = new System.Windows.Forms.Label();
+            this.textBoxResourceDir = new System.Windows.Forms.TextBox();
+            this.buttonResourceDirSelect = new System.Windows.Forms.Button();
             this.lblList = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.trackBar = new System.Windows.Forms.TrackBar();
+            this.buttonRewind = new System.Windows.Forms.Button();
+            this.buttonPause = new System.Windows.Forms.Button();
+            this.buttonPlay = new System.Windows.Forms.Button();
+            this.labelCurrPos = new System.Windows.Forms.Label();
+            this.labelSlash = new System.Windows.Forms.Label();
+            this.labelEndPos = new System.Windows.Forms.Label();
             this.lblCtrl = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelLoadedTimelineLabel = new System.Windows.Forms.Label();
+            this.labelLoadedTimeline = new System.Windows.Forms.Label();
             this.lblInfo = new System.Windows.Forms.Label();
             this.tabOption = new System.Windows.Forms.TabPage();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarOpacity)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.udOverlayY)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.udBarWidth)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.udTextWidth)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.udNumRows)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.udOverlayX)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar)).BeginInit();
+            this.checkBoxAutohide = new System.Windows.Forms.CheckBox();
+            this.checkBoxAutoloadAfterChangeZone = new System.Windows.Forms.CheckBox();
+            this.trackBarOpacity = new System.Windows.Forms.TrackBar();
+            this.checkBoxPlaySoundByACT = new System.Windows.Forms.CheckBox();
+            this.checkBoxShowOverlayButtons = new System.Windows.Forms.CheckBox();
+            this.labelOverlayOrientation = new System.Windows.Forms.Label();
+            this.checkBoxMoveOverlayByDrag = new System.Windows.Forms.CheckBox();
+            this.labelNumRows = new System.Windows.Forms.Label();
+            this.labelOverlayY = new System.Windows.Forms.Label();
+            this.labelOpacity = new System.Windows.Forms.Label();
+            this.buttonFontSelect = new System.Windows.Forms.Button();
+            this.labelCurrOpacity = new System.Windows.Forms.Label();
+            this.labelBar = new System.Windows.Forms.Label();
+            this.labelColumnSize = new System.Windows.Forms.Label();
+            this.labelTextWidth = new System.Windows.Forms.Label();
+            this.labelFont = new System.Windows.Forms.Label();
+            this.labelOverlayX = new System.Windows.Forms.Label();
+            this.udOverlayY = new System.Windows.Forms.NumericUpDown();
+            this.udOverlayX = new System.Windows.Forms.NumericUpDown();
+            this.udBarWidth = new System.Windows.Forms.NumericUpDown();
+            this.udNumRows = new System.Windows.Forms.NumericUpDown();
+            this.udTextWidth = new System.Windows.Forms.NumericUpDown();
             this.tabControlExt1.SuspendLayout();
             this.tabMain.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar)).BeginInit();
             this.panel1.SuspendLayout();
             this.tabOption.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarOpacity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.udOverlayY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.udOverlayX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.udBarWidth)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.udNumRows)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.udTextWidth)).BeginInit();
             this.SuspendLayout();
-            // 
-            // buttonResourceDirSelect
-            // 
-            this.buttonResourceDirSelect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonResourceDirSelect.Location = new System.Drawing.Point(777, 7);
-            this.buttonResourceDirSelect.Name = "buttonResourceDirSelect";
-            this.buttonResourceDirSelect.Size = new System.Drawing.Size(75, 23);
-            this.buttonResourceDirSelect.TabIndex = 0;
-            this.buttonResourceDirSelect.Text = "Choose";
-            this.buttonResourceDirSelect.UseVisualStyleBackColor = true;
-            this.buttonResourceDirSelect.Click += new System.EventHandler(this.buttonResourceDirSelect_Click);
-            // 
-            // textBoxResourceDir
-            // 
-            this.textBoxResourceDir.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxResourceDir.Location = new System.Drawing.Point(156, 8);
-            this.textBoxResourceDir.Name = "textBoxResourceDir";
-            this.textBoxResourceDir.Size = new System.Drawing.Size(615, 21);
-            this.textBoxResourceDir.TabIndex = 1;
-            this.textBoxResourceDir.TextChanged += new System.EventHandler(this.textBoxResourceDir_TextChanged);
-            // 
-            // labelResourceDir
-            // 
-            this.labelResourceDir.Location = new System.Drawing.Point(4, 9);
-            this.labelResourceDir.Name = "labelResourceDir";
-            this.labelResourceDir.Size = new System.Drawing.Size(146, 21);
-            this.labelResourceDir.TabIndex = 2;
-            this.labelResourceDir.Text = "Resources Directory:";
-            this.labelResourceDir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // checkBoxAutoloadAfterChangeZone
-            // 
-            this.checkBoxAutoloadAfterChangeZone.AutoSize = true;
-            this.checkBoxAutoloadAfterChangeZone.Location = new System.Drawing.Point(12, 35);
-            this.checkBoxAutoloadAfterChangeZone.Name = "checkBoxAutoloadAfterChangeZone";
-            this.checkBoxAutoloadAfterChangeZone.Size = new System.Drawing.Size(179, 16);
-            this.checkBoxAutoloadAfterChangeZone.TabIndex = 4;
-            this.checkBoxAutoloadAfterChangeZone.Text = "Autoload after change zone";
-            this.checkBoxAutoloadAfterChangeZone.UseVisualStyleBackColor = true;
-            this.checkBoxAutoloadAfterChangeZone.CheckedChanged += new System.EventHandler(this.checkBoxAutoloadAfterChangeZone_CheckedChanged);
-            // 
-            // labelResourceDirStatus
-            // 
-            this.labelResourceDirStatus.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelResourceDirStatus.Location = new System.Drawing.Point(2, 245);
-            this.labelResourceDirStatus.Name = "labelResourceDirStatus";
-            this.labelResourceDirStatus.Padding = new System.Windows.Forms.Padding(5);
-            this.labelResourceDirStatus.Size = new System.Drawing.Size(860, 24);
-            this.labelResourceDirStatus.TabIndex = 3;
-            this.labelResourceDirStatus.Text = "Resource Dir Status";
-            this.labelResourceDirStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // checkBoxPlaySoundByACT
-            // 
-            this.checkBoxPlaySoundByACT.AutoSize = true;
-            this.checkBoxPlaySoundByACT.Checked = true;
-            this.checkBoxPlaySoundByACT.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxPlaySoundByACT.Location = new System.Drawing.Point(12, 13);
-            this.checkBoxPlaySoundByACT.Name = "checkBoxPlaySoundByACT";
-            this.checkBoxPlaySoundByACT.Size = new System.Drawing.Size(135, 16);
-            this.checkBoxPlaySoundByACT.TabIndex = 3;
-            this.checkBoxPlaySoundByACT.Text = "Play sound by ACT";
-            this.checkBoxPlaySoundByACT.UseVisualStyleBackColor = true;
-            this.checkBoxPlaySoundByACT.CheckedChanged += new System.EventHandler(this.checkBoxPlaySoundByACT_CheckedChanged);
-            // 
-            // buttonResourceDirOpen
-            // 
-            this.buttonResourceDirOpen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonResourceDirOpen.Location = new System.Drawing.Point(747, 10);
-            this.buttonResourceDirOpen.Name = "buttonResourceDirOpen";
-            this.buttonResourceDirOpen.Size = new System.Drawing.Size(104, 25);
-            this.buttonResourceDirOpen.TabIndex = 0;
-            this.buttonResourceDirOpen.Text = "Open Folder";
-            this.buttonResourceDirOpen.UseVisualStyleBackColor = true;
-            this.buttonResourceDirOpen.Click += new System.EventHandler(this.buttonResourceDirOpen_Click);
-            // 
-            // buttonRefreshList
-            // 
-            this.buttonRefreshList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRefreshList.Location = new System.Drawing.Point(747, 41);
-            this.buttonRefreshList.Name = "buttonRefreshList";
-            this.buttonRefreshList.Size = new System.Drawing.Size(104, 25);
-            this.buttonRefreshList.TabIndex = 1;
-            this.buttonRefreshList.Text = "Refresh List";
-            this.buttonRefreshList.UseVisualStyleBackColor = true;
-            this.buttonRefreshList.Click += new System.EventHandler(this.buttonRefreshList_Click);
-            // 
-            // buttonLoad
-            // 
-            this.buttonLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonLoad.Location = new System.Drawing.Point(747, 72);
-            this.buttonLoad.Name = "buttonLoad";
-            this.buttonLoad.Size = new System.Drawing.Size(104, 25);
-            this.buttonLoad.TabIndex = 1;
-            this.buttonLoad.Text = "Load";
-            this.buttonLoad.UseVisualStyleBackColor = true;
-            this.buttonLoad.Click += new System.EventHandler(this.buttonLoad_Click);
-            // 
-            // checkBoxAutohide
-            // 
-            this.checkBoxAutohide.AutoSize = true;
-            this.checkBoxAutohide.Checked = true;
-            this.checkBoxAutohide.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxAutohide.Location = new System.Drawing.Point(12, 101);
-            this.checkBoxAutohide.Name = "checkBoxAutohide";
-            this.checkBoxAutohide.Size = new System.Drawing.Size(77, 16);
-            this.checkBoxAutohide.TabIndex = 5;
-            this.checkBoxAutohide.Text = "Auto hide";
-            this.checkBoxAutohide.UseVisualStyleBackColor = true;
-            this.checkBoxAutohide.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // trackBarOpacity
-            // 
-            this.trackBarOpacity.Location = new System.Drawing.Point(186, 269);
-            this.trackBarOpacity.Maximum = 100;
-            this.trackBarOpacity.Minimum = 1;
-            this.trackBarOpacity.Name = "trackBarOpacity";
-            this.trackBarOpacity.Size = new System.Drawing.Size(273, 45);
-            this.trackBarOpacity.TabIndex = 4;
-            this.trackBarOpacity.TickFrequency = 10;
-            this.trackBarOpacity.Value = 1;
-            this.trackBarOpacity.Scroll += new System.EventHandler(this.trackBarOpacity_Scroll);
-            // 
-            // checkBoxShowOverlayButtons
-            // 
-            this.checkBoxShowOverlayButtons.AutoSize = true;
-            this.checkBoxShowOverlayButtons.Checked = true;
-            this.checkBoxShowOverlayButtons.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxShowOverlayButtons.Location = new System.Drawing.Point(12, 79);
-            this.checkBoxShowOverlayButtons.Name = "checkBoxShowOverlayButtons";
-            this.checkBoxShowOverlayButtons.Size = new System.Drawing.Size(175, 16);
-            this.checkBoxShowOverlayButtons.TabIndex = 3;
-            this.checkBoxShowOverlayButtons.Text = "Show mini button controls.";
-            this.checkBoxShowOverlayButtons.UseVisualStyleBackColor = true;
-            this.checkBoxShowOverlayButtons.CheckedChanged += new System.EventHandler(this.checkBoxShowOverlayButtons_CheckedChanged);
-            // 
-            // checkBoxMoveOverlayByDrag
-            // 
-            this.checkBoxMoveOverlayByDrag.AutoSize = true;
-            this.checkBoxMoveOverlayByDrag.Checked = true;
-            this.checkBoxMoveOverlayByDrag.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxMoveOverlayByDrag.Location = new System.Drawing.Point(12, 57);
-            this.checkBoxMoveOverlayByDrag.Name = "checkBoxMoveOverlayByDrag";
-            this.checkBoxMoveOverlayByDrag.Size = new System.Drawing.Size(256, 16);
-            this.checkBoxMoveOverlayByDrag.TabIndex = 3;
-            this.checkBoxMoveOverlayByDrag.Text = "Move by drag && right doubleclick to hide.";
-            this.checkBoxMoveOverlayByDrag.UseVisualStyleBackColor = true;
-            this.checkBoxMoveOverlayByDrag.CheckedChanged += new System.EventHandler(this.checkBoxMoveOverlayByDrag_CheckedChanged);
-            // 
-            // labelOverlayY
-            // 
-            this.labelOverlayY.AutoSize = true;
-            this.labelOverlayY.Location = new System.Drawing.Point(294, 179);
-            this.labelOverlayY.Name = "labelOverlayY";
-            this.labelOverlayY.Size = new System.Drawing.Size(17, 12);
-            this.labelOverlayY.TabIndex = 2;
-            this.labelOverlayY.Text = "Y:";
-            // 
-            // buttonFontSelect
-            // 
-            this.buttonFontSelect.Location = new System.Drawing.Point(49, 134);
-            this.buttonFontSelect.Name = "buttonFontSelect";
-            this.buttonFontSelect.Size = new System.Drawing.Size(486, 28);
-            this.buttonFontSelect.TabIndex = 0;
-            this.buttonFontSelect.Text = "Select Font";
-            this.buttonFontSelect.UseVisualStyleBackColor = true;
-            this.buttonFontSelect.Click += new System.EventHandler(this.buttonFontSelect_Click);
-            // 
-            // labelBar
-            // 
-            this.labelBar.AutoSize = true;
-            this.labelBar.Location = new System.Drawing.Point(294, 238);
-            this.labelBar.Name = "labelBar";
-            this.labelBar.Size = new System.Drawing.Size(28, 12);
-            this.labelBar.TabIndex = 2;
-            this.labelBar.Text = "Bar:";
-            this.labelBar.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // labelTextWidth
-            // 
-            this.labelTextWidth.AutoSize = true;
-            this.labelTextWidth.Location = new System.Drawing.Point(143, 238);
-            this.labelTextWidth.Name = "labelTextWidth";
-            this.labelTextWidth.Size = new System.Drawing.Size(34, 12);
-            this.labelTextWidth.TabIndex = 2;
-            this.labelTextWidth.Text = "Text:";
-            this.labelTextWidth.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // labelOverlayX
-            // 
-            this.labelOverlayX.AutoSize = true;
-            this.labelOverlayX.Location = new System.Drawing.Point(163, 179);
-            this.labelOverlayX.Name = "labelOverlayX";
-            this.labelOverlayX.Size = new System.Drawing.Size(17, 12);
-            this.labelOverlayX.TabIndex = 2;
-            this.labelOverlayX.Text = "X:";
-            // 
-            // udOverlayY
-            // 
-            this.udOverlayY.Location = new System.Drawing.Point(335, 177);
-            this.udOverlayY.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.udOverlayY.Minimum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            -2147483648});
-            this.udOverlayY.Name = "udOverlayY";
-            this.udOverlayY.Size = new System.Drawing.Size(93, 21);
-            this.udOverlayY.TabIndex = 1;
-            this.udOverlayY.Value = new decimal(new int[] {
-            200,
-            0,
-            0,
-            0});
-            this.udOverlayY.ValueChanged += new System.EventHandler(this.udOverlayY_ValueChanged);
-            // 
-            // udBarWidth
-            // 
-            this.udBarWidth.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.udBarWidth.Location = new System.Drawing.Point(335, 236);
-            this.udBarWidth.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.udBarWidth.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.udBarWidth.Name = "udBarWidth";
-            this.udBarWidth.Size = new System.Drawing.Size(93, 21);
-            this.udBarWidth.TabIndex = 1;
-            this.udBarWidth.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.udBarWidth.ValueChanged += new System.EventHandler(this.udBarWidth_ValueChanged);
-            // 
-            // udTextWidth
-            // 
-            this.udTextWidth.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.udTextWidth.Location = new System.Drawing.Point(186, 236);
-            this.udTextWidth.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.udTextWidth.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.udTextWidth.Name = "udTextWidth";
-            this.udTextWidth.Size = new System.Drawing.Size(93, 21);
-            this.udTextWidth.TabIndex = 1;
-            this.udTextWidth.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.udTextWidth.ValueChanged += new System.EventHandler(this.udTextWidth_ValueChanged);
-            // 
-            // udNumRows
-            // 
-            this.udNumRows.Location = new System.Drawing.Point(186, 205);
-            this.udNumRows.Name = "udNumRows";
-            this.udNumRows.Size = new System.Drawing.Size(47, 21);
-            this.udNumRows.TabIndex = 1;
-            this.udNumRows.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.udNumRows.ValueChanged += new System.EventHandler(this.udNumRows_ValueChanged);
-            // 
-            // udOverlayX
-            // 
-            this.udOverlayX.Location = new System.Drawing.Point(186, 177);
-            this.udOverlayX.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.udOverlayX.Minimum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            -2147483648});
-            this.udOverlayX.Name = "udOverlayX";
-            this.udOverlayX.Size = new System.Drawing.Size(93, 21);
-            this.udOverlayX.TabIndex = 1;
-            this.udOverlayX.Value = new decimal(new int[] {
-            200,
-            0,
-            0,
-            0});
-            this.udOverlayX.ValueChanged += new System.EventHandler(this.udOverlayX_ValueChanged);
-            // 
-            // labelFont
-            // 
-            this.labelFont.AutoSize = true;
-            this.labelFont.Location = new System.Drawing.Point(10, 142);
-            this.labelFont.Name = "labelFont";
-            this.labelFont.Size = new System.Drawing.Size(33, 12);
-            this.labelFont.TabIndex = 0;
-            this.labelFont.Text = "Font:";
-            // 
-            // labelColumnSize
-            // 
-            this.labelColumnSize.AutoSize = true;
-            this.labelColumnSize.Location = new System.Drawing.Point(10, 238);
-            this.labelColumnSize.Name = "labelColumnSize";
-            this.labelColumnSize.Size = new System.Drawing.Size(83, 12);
-            this.labelColumnSize.TabIndex = 0;
-            this.labelColumnSize.Text = "Column Width";
-            // 
-            // labelCurrOpacity
-            // 
-            this.labelCurrOpacity.AutoSize = true;
-            this.labelCurrOpacity.Location = new System.Drawing.Point(466, 273);
-            this.labelCurrOpacity.Name = "labelCurrOpacity";
-            this.labelCurrOpacity.Size = new System.Drawing.Size(27, 12);
-            this.labelCurrOpacity.TabIndex = 0;
-            this.labelCurrOpacity.Text = "??%";
-            // 
-            // labelOpacity
-            // 
-            this.labelOpacity.AutoSize = true;
-            this.labelOpacity.Location = new System.Drawing.Point(10, 273);
-            this.labelOpacity.Name = "labelOpacity";
-            this.labelOpacity.Size = new System.Drawing.Size(52, 12);
-            this.labelOpacity.TabIndex = 0;
-            this.labelOpacity.Text = "Opacity:";
-            // 
-            // labelNumRows
-            // 
-            this.labelNumRows.AutoSize = true;
-            this.labelNumRows.Location = new System.Drawing.Point(10, 207);
-            this.labelNumRows.Name = "labelNumRows";
-            this.labelNumRows.Size = new System.Drawing.Size(159, 12);
-            this.labelNumRows.TabIndex = 0;
-            this.labelNumRows.Text = "Number of rows to display:";
-            // 
-            // labelOverlayOrientation
-            // 
-            this.labelOverlayOrientation.AutoSize = true;
-            this.labelOverlayOrientation.Location = new System.Drawing.Point(10, 179);
-            this.labelOverlayOrientation.Name = "labelOverlayOrientation";
-            this.labelOverlayOrientation.Size = new System.Drawing.Size(112, 12);
-            this.labelOverlayOrientation.TabIndex = 0;
-            this.labelOverlayOrientation.Text = "Overlay Orientation";
-            // 
-            // labelSlash
-            // 
-            this.labelSlash.AutoSize = true;
-            this.labelSlash.BackColor = System.Drawing.Color.Transparent;
-            this.labelSlash.Location = new System.Drawing.Point(392, 72);
-            this.labelSlash.Name = "labelSlash";
-            this.labelSlash.Size = new System.Drawing.Size(11, 12);
-            this.labelSlash.TabIndex = 4;
-            this.labelSlash.Text = "/";
-            // 
-            // buttonPause
-            // 
-            this.buttonPause.Enabled = false;
-            this.buttonPause.Location = new System.Drawing.Point(118, 67);
-            this.buttonPause.Name = "buttonPause";
-            this.buttonPause.Size = new System.Drawing.Size(101, 24);
-            this.buttonPause.TabIndex = 5;
-            this.buttonPause.Text = "Pause";
-            this.buttonPause.UseVisualStyleBackColor = true;
-            this.buttonPause.Click += new System.EventHandler(this.buttonPause_Click);
-            // 
-            // buttonPlay
-            // 
-            this.buttonPlay.Location = new System.Drawing.Point(225, 67);
-            this.buttonPlay.Name = "buttonPlay";
-            this.buttonPlay.Size = new System.Drawing.Size(101, 24);
-            this.buttonPlay.TabIndex = 5;
-            this.buttonPlay.Text = "Play";
-            this.buttonPlay.UseVisualStyleBackColor = true;
-            this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
-            // 
-            // buttonRewind
-            // 
-            this.buttonRewind.Location = new System.Drawing.Point(11, 67);
-            this.buttonRewind.Name = "buttonRewind";
-            this.buttonRewind.Size = new System.Drawing.Size(101, 24);
-            this.buttonRewind.TabIndex = 5;
-            this.buttonRewind.Text = "<< Rewind";
-            this.buttonRewind.UseVisualStyleBackColor = true;
-            this.buttonRewind.Click += new System.EventHandler(this.buttonRewind_Click);
-            // 
-            // labelEndPos
-            // 
-            this.labelEndPos.AutoSize = true;
-            this.labelEndPos.Location = new System.Drawing.Point(418, 73);
-            this.labelEndPos.Name = "labelEndPos";
-            this.labelEndPos.Size = new System.Drawing.Size(33, 12);
-            this.labelEndPos.TabIndex = 3;
-            this.labelEndPos.Text = "00:00";
-            // 
-            // labelCurrPos
-            // 
-            this.labelCurrPos.AutoSize = true;
-            this.labelCurrPos.Location = new System.Drawing.Point(344, 73);
-            this.labelCurrPos.Name = "labelCurrPos";
-            this.labelCurrPos.Size = new System.Drawing.Size(33, 12);
-            this.labelCurrPos.TabIndex = 3;
-            this.labelCurrPos.Text = "00:00";
-            // 
-            // labelLoadedTimeline
-            // 
-            this.labelLoadedTimeline.AutoSize = true;
-            this.labelLoadedTimeline.Location = new System.Drawing.Point(146, 8);
-            this.labelLoadedTimeline.Name = "labelLoadedTimeline";
-            this.labelLoadedTimeline.Size = new System.Drawing.Size(138, 12);
-            this.labelLoadedTimeline.TabIndex = 2;
-            this.labelLoadedTimeline.Text = "-- No active timeline --";
-            // 
-            // labelLoadedTimelineLabel
-            // 
-            this.labelLoadedTimelineLabel.AutoSize = true;
-            this.labelLoadedTimelineLabel.Location = new System.Drawing.Point(9, 8);
-            this.labelLoadedTimelineLabel.Name = "labelLoadedTimelineLabel";
-            this.labelLoadedTimelineLabel.Size = new System.Drawing.Size(104, 12);
-            this.labelLoadedTimelineLabel.TabIndex = 1;
-            this.labelLoadedTimelineLabel.Text = "Loaded Timeline:";
-            // 
-            // trackBar
-            // 
-            this.trackBar.Location = new System.Drawing.Point(11, 12);
-            this.trackBar.Name = "trackBar";
-            this.trackBar.Size = new System.Drawing.Size(837, 45);
-            this.trackBar.TabIndex = 0;
-            this.trackBar.TickFrequency = 30;
-            this.trackBar.Scroll += new System.EventHandler(this.trackbar_Scroll);
             // 
             // tabControlExt1
             // 
@@ -604,6 +152,50 @@
             this.ListItems.Size = new System.Drawing.Size(732, 334);
             this.ListItems.TabIndex = 2;
             // 
+            // buttonResourceDirOpen
+            // 
+            this.buttonResourceDirOpen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonResourceDirOpen.Location = new System.Drawing.Point(747, 10);
+            this.buttonResourceDirOpen.Name = "buttonResourceDirOpen";
+            this.buttonResourceDirOpen.Size = new System.Drawing.Size(104, 25);
+            this.buttonResourceDirOpen.TabIndex = 0;
+            this.buttonResourceDirOpen.Text = "Open Folder";
+            this.buttonResourceDirOpen.UseVisualStyleBackColor = true;
+            this.buttonResourceDirOpen.Click += new System.EventHandler(this.buttonResourceDirOpen_Click);
+            // 
+            // buttonLoad
+            // 
+            this.buttonLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonLoad.Location = new System.Drawing.Point(747, 72);
+            this.buttonLoad.Name = "buttonLoad";
+            this.buttonLoad.Size = new System.Drawing.Size(104, 25);
+            this.buttonLoad.TabIndex = 1;
+            this.buttonLoad.Text = "Load";
+            this.buttonLoad.UseVisualStyleBackColor = true;
+            this.buttonLoad.Click += new System.EventHandler(this.buttonLoad_Click);
+            // 
+            // buttonRefreshList
+            // 
+            this.buttonRefreshList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRefreshList.Location = new System.Drawing.Point(747, 41);
+            this.buttonRefreshList.Name = "buttonRefreshList";
+            this.buttonRefreshList.Size = new System.Drawing.Size(104, 25);
+            this.buttonRefreshList.TabIndex = 1;
+            this.buttonRefreshList.Text = "Refresh List";
+            this.buttonRefreshList.UseVisualStyleBackColor = true;
+            this.buttonRefreshList.Click += new System.EventHandler(this.buttonRefreshList_Click);
+            // 
+            // labelResourceDirStatus
+            // 
+            this.labelResourceDirStatus.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelResourceDirStatus.Location = new System.Drawing.Point(2, 245);
+            this.labelResourceDirStatus.Name = "labelResourceDirStatus";
+            this.labelResourceDirStatus.Padding = new System.Windows.Forms.Padding(5);
+            this.labelResourceDirStatus.Size = new System.Drawing.Size(860, 24);
+            this.labelResourceDirStatus.TabIndex = 3;
+            this.labelResourceDirStatus.Text = "Resource Dir Status";
+            this.labelResourceDirStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
@@ -615,6 +207,36 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(860, 38);
             this.panel3.TabIndex = 11;
+            // 
+            // labelResourceDir
+            // 
+            this.labelResourceDir.Location = new System.Drawing.Point(4, 9);
+            this.labelResourceDir.Name = "labelResourceDir";
+            this.labelResourceDir.Size = new System.Drawing.Size(146, 21);
+            this.labelResourceDir.TabIndex = 2;
+            this.labelResourceDir.Text = "Resources Directory:";
+            this.labelResourceDir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // textBoxResourceDir
+            // 
+            this.textBoxResourceDir.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxResourceDir.Location = new System.Drawing.Point(156, 8);
+            this.textBoxResourceDir.Name = "textBoxResourceDir";
+            this.textBoxResourceDir.Size = new System.Drawing.Size(615, 21);
+            this.textBoxResourceDir.TabIndex = 1;
+            this.textBoxResourceDir.TextChanged += new System.EventHandler(this.textBoxResourceDir_TextChanged);
+            // 
+            // buttonResourceDirSelect
+            // 
+            this.buttonResourceDirSelect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonResourceDirSelect.Location = new System.Drawing.Point(777, 7);
+            this.buttonResourceDirSelect.Name = "buttonResourceDirSelect";
+            this.buttonResourceDirSelect.Size = new System.Drawing.Size(75, 23);
+            this.buttonResourceDirSelect.TabIndex = 0;
+            this.buttonResourceDirSelect.Text = "Choose";
+            this.buttonResourceDirSelect.UseVisualStyleBackColor = true;
+            this.buttonResourceDirSelect.Click += new System.EventHandler(this.buttonResourceDirSelect_Click);
             // 
             // lblList
             // 
@@ -643,6 +265,77 @@
             this.panel2.Size = new System.Drawing.Size(860, 101);
             this.panel2.TabIndex = 9;
             // 
+            // trackBar
+            // 
+            this.trackBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackBar.AutoSize = false;
+            this.trackBar.Location = new System.Drawing.Point(11, 12);
+            this.trackBar.Name = "trackBar";
+            this.trackBar.Size = new System.Drawing.Size(837, 45);
+            this.trackBar.TabIndex = 0;
+            this.trackBar.TickFrequency = 30;
+            this.trackBar.Scroll += new System.EventHandler(this.trackbar_Scroll);
+            // 
+            // buttonRewind
+            // 
+            this.buttonRewind.Location = new System.Drawing.Point(11, 67);
+            this.buttonRewind.Name = "buttonRewind";
+            this.buttonRewind.Size = new System.Drawing.Size(101, 24);
+            this.buttonRewind.TabIndex = 5;
+            this.buttonRewind.Text = "<< Rewind";
+            this.buttonRewind.UseVisualStyleBackColor = true;
+            this.buttonRewind.Click += new System.EventHandler(this.buttonRewind_Click);
+            // 
+            // buttonPause
+            // 
+            this.buttonPause.Enabled = false;
+            this.buttonPause.Location = new System.Drawing.Point(118, 67);
+            this.buttonPause.Name = "buttonPause";
+            this.buttonPause.Size = new System.Drawing.Size(101, 24);
+            this.buttonPause.TabIndex = 5;
+            this.buttonPause.Text = "Pause";
+            this.buttonPause.UseVisualStyleBackColor = true;
+            this.buttonPause.Click += new System.EventHandler(this.buttonPause_Click);
+            // 
+            // buttonPlay
+            // 
+            this.buttonPlay.Location = new System.Drawing.Point(225, 67);
+            this.buttonPlay.Name = "buttonPlay";
+            this.buttonPlay.Size = new System.Drawing.Size(101, 24);
+            this.buttonPlay.TabIndex = 5;
+            this.buttonPlay.Text = "Play";
+            this.buttonPlay.UseVisualStyleBackColor = true;
+            this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
+            // 
+            // labelCurrPos
+            // 
+            this.labelCurrPos.AutoSize = true;
+            this.labelCurrPos.Location = new System.Drawing.Point(344, 73);
+            this.labelCurrPos.Name = "labelCurrPos";
+            this.labelCurrPos.Size = new System.Drawing.Size(33, 12);
+            this.labelCurrPos.TabIndex = 3;
+            this.labelCurrPos.Text = "00:00";
+            // 
+            // labelSlash
+            // 
+            this.labelSlash.AutoSize = true;
+            this.labelSlash.BackColor = System.Drawing.Color.Transparent;
+            this.labelSlash.Location = new System.Drawing.Point(392, 72);
+            this.labelSlash.Name = "labelSlash";
+            this.labelSlash.Size = new System.Drawing.Size(11, 12);
+            this.labelSlash.TabIndex = 4;
+            this.labelSlash.Text = "/";
+            // 
+            // labelEndPos
+            // 
+            this.labelEndPos.AutoSize = true;
+            this.labelEndPos.Location = new System.Drawing.Point(418, 73);
+            this.labelEndPos.Name = "labelEndPos";
+            this.labelEndPos.Size = new System.Drawing.Size(33, 12);
+            this.labelEndPos.TabIndex = 3;
+            this.labelEndPos.Text = "00:00";
+            // 
             // lblCtrl
             // 
             this.lblCtrl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -665,6 +358,24 @@
             this.panel1.Size = new System.Drawing.Size(860, 32);
             this.panel1.TabIndex = 7;
             // 
+            // labelLoadedTimelineLabel
+            // 
+            this.labelLoadedTimelineLabel.AutoSize = true;
+            this.labelLoadedTimelineLabel.Location = new System.Drawing.Point(9, 8);
+            this.labelLoadedTimelineLabel.Name = "labelLoadedTimelineLabel";
+            this.labelLoadedTimelineLabel.Size = new System.Drawing.Size(104, 12);
+            this.labelLoadedTimelineLabel.TabIndex = 1;
+            this.labelLoadedTimelineLabel.Text = "Loaded Timeline:";
+            // 
+            // labelLoadedTimeline
+            // 
+            this.labelLoadedTimeline.AutoSize = true;
+            this.labelLoadedTimeline.Location = new System.Drawing.Point(146, 8);
+            this.labelLoadedTimeline.Name = "labelLoadedTimeline";
+            this.labelLoadedTimeline.Size = new System.Drawing.Size(138, 12);
+            this.labelLoadedTimeline.TabIndex = 2;
+            this.labelLoadedTimeline.Text = "-- No active timeline --";
+            // 
             // lblInfo
             // 
             this.lblInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -679,6 +390,7 @@
             // 
             // tabOption
             // 
+            this.tabOption.BackColor = System.Drawing.Color.White;
             this.tabOption.Controls.Add(this.checkBoxAutohide);
             this.tabOption.Controls.Add(this.checkBoxAutoloadAfterChangeZone);
             this.tabOption.Controls.Add(this.trackBarOpacity);
@@ -707,7 +419,298 @@
             this.tabOption.Size = new System.Drawing.Size(864, 624);
             this.tabOption.TabIndex = 1;
             this.tabOption.Text = "tabOption";
-            this.tabOption.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxAutohide
+            // 
+            this.checkBoxAutohide.AutoSize = true;
+            this.checkBoxAutohide.Checked = true;
+            this.checkBoxAutohide.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxAutohide.Location = new System.Drawing.Point(12, 101);
+            this.checkBoxAutohide.Name = "checkBoxAutohide";
+            this.checkBoxAutohide.Size = new System.Drawing.Size(77, 16);
+            this.checkBoxAutohide.TabIndex = 5;
+            this.checkBoxAutohide.Text = "Auto hide";
+            this.checkBoxAutohide.UseVisualStyleBackColor = true;
+            this.checkBoxAutohide.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxAutoloadAfterChangeZone
+            // 
+            this.checkBoxAutoloadAfterChangeZone.AutoSize = true;
+            this.checkBoxAutoloadAfterChangeZone.Location = new System.Drawing.Point(12, 35);
+            this.checkBoxAutoloadAfterChangeZone.Name = "checkBoxAutoloadAfterChangeZone";
+            this.checkBoxAutoloadAfterChangeZone.Size = new System.Drawing.Size(179, 16);
+            this.checkBoxAutoloadAfterChangeZone.TabIndex = 4;
+            this.checkBoxAutoloadAfterChangeZone.Text = "Autoload after change zone";
+            this.checkBoxAutoloadAfterChangeZone.UseVisualStyleBackColor = true;
+            this.checkBoxAutoloadAfterChangeZone.CheckedChanged += new System.EventHandler(this.checkBoxAutoloadAfterChangeZone_CheckedChanged);
+            // 
+            // trackBarOpacity
+            // 
+            this.trackBarOpacity.Location = new System.Drawing.Point(186, 269);
+            this.trackBarOpacity.Maximum = 100;
+            this.trackBarOpacity.Minimum = 1;
+            this.trackBarOpacity.Name = "trackBarOpacity";
+            this.trackBarOpacity.Size = new System.Drawing.Size(273, 45);
+            this.trackBarOpacity.TabIndex = 4;
+            this.trackBarOpacity.TickFrequency = 10;
+            this.trackBarOpacity.Value = 1;
+            this.trackBarOpacity.Scroll += new System.EventHandler(this.trackBarOpacity_Scroll);
+            // 
+            // checkBoxPlaySoundByACT
+            // 
+            this.checkBoxPlaySoundByACT.AutoSize = true;
+            this.checkBoxPlaySoundByACT.Checked = true;
+            this.checkBoxPlaySoundByACT.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxPlaySoundByACT.Location = new System.Drawing.Point(12, 13);
+            this.checkBoxPlaySoundByACT.Name = "checkBoxPlaySoundByACT";
+            this.checkBoxPlaySoundByACT.Size = new System.Drawing.Size(135, 16);
+            this.checkBoxPlaySoundByACT.TabIndex = 3;
+            this.checkBoxPlaySoundByACT.Text = "Play sound by ACT";
+            this.checkBoxPlaySoundByACT.UseVisualStyleBackColor = true;
+            this.checkBoxPlaySoundByACT.CheckedChanged += new System.EventHandler(this.checkBoxPlaySoundByACT_CheckedChanged);
+            // 
+            // checkBoxShowOverlayButtons
+            // 
+            this.checkBoxShowOverlayButtons.AutoSize = true;
+            this.checkBoxShowOverlayButtons.Checked = true;
+            this.checkBoxShowOverlayButtons.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxShowOverlayButtons.Location = new System.Drawing.Point(12, 79);
+            this.checkBoxShowOverlayButtons.Name = "checkBoxShowOverlayButtons";
+            this.checkBoxShowOverlayButtons.Size = new System.Drawing.Size(175, 16);
+            this.checkBoxShowOverlayButtons.TabIndex = 3;
+            this.checkBoxShowOverlayButtons.Text = "Show mini button controls.";
+            this.checkBoxShowOverlayButtons.UseVisualStyleBackColor = true;
+            this.checkBoxShowOverlayButtons.CheckedChanged += new System.EventHandler(this.checkBoxShowOverlayButtons_CheckedChanged);
+            // 
+            // labelOverlayOrientation
+            // 
+            this.labelOverlayOrientation.AutoSize = true;
+            this.labelOverlayOrientation.Location = new System.Drawing.Point(10, 179);
+            this.labelOverlayOrientation.Name = "labelOverlayOrientation";
+            this.labelOverlayOrientation.Size = new System.Drawing.Size(112, 12);
+            this.labelOverlayOrientation.TabIndex = 0;
+            this.labelOverlayOrientation.Text = "Overlay Orientation";
+            // 
+            // checkBoxMoveOverlayByDrag
+            // 
+            this.checkBoxMoveOverlayByDrag.AutoSize = true;
+            this.checkBoxMoveOverlayByDrag.Checked = true;
+            this.checkBoxMoveOverlayByDrag.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxMoveOverlayByDrag.Location = new System.Drawing.Point(12, 57);
+            this.checkBoxMoveOverlayByDrag.Name = "checkBoxMoveOverlayByDrag";
+            this.checkBoxMoveOverlayByDrag.Size = new System.Drawing.Size(256, 16);
+            this.checkBoxMoveOverlayByDrag.TabIndex = 3;
+            this.checkBoxMoveOverlayByDrag.Text = "Move by drag && right doubleclick to hide.";
+            this.checkBoxMoveOverlayByDrag.UseVisualStyleBackColor = true;
+            this.checkBoxMoveOverlayByDrag.CheckedChanged += new System.EventHandler(this.checkBoxMoveOverlayByDrag_CheckedChanged);
+            // 
+            // labelNumRows
+            // 
+            this.labelNumRows.AutoSize = true;
+            this.labelNumRows.Location = new System.Drawing.Point(10, 207);
+            this.labelNumRows.Name = "labelNumRows";
+            this.labelNumRows.Size = new System.Drawing.Size(159, 12);
+            this.labelNumRows.TabIndex = 0;
+            this.labelNumRows.Text = "Number of rows to display:";
+            // 
+            // labelOverlayY
+            // 
+            this.labelOverlayY.AutoSize = true;
+            this.labelOverlayY.Location = new System.Drawing.Point(294, 179);
+            this.labelOverlayY.Name = "labelOverlayY";
+            this.labelOverlayY.Size = new System.Drawing.Size(17, 12);
+            this.labelOverlayY.TabIndex = 2;
+            this.labelOverlayY.Text = "Y:";
+            // 
+            // labelOpacity
+            // 
+            this.labelOpacity.AutoSize = true;
+            this.labelOpacity.Location = new System.Drawing.Point(10, 273);
+            this.labelOpacity.Name = "labelOpacity";
+            this.labelOpacity.Size = new System.Drawing.Size(52, 12);
+            this.labelOpacity.TabIndex = 0;
+            this.labelOpacity.Text = "Opacity:";
+            // 
+            // buttonFontSelect
+            // 
+            this.buttonFontSelect.Location = new System.Drawing.Point(49, 134);
+            this.buttonFontSelect.Name = "buttonFontSelect";
+            this.buttonFontSelect.Size = new System.Drawing.Size(486, 28);
+            this.buttonFontSelect.TabIndex = 0;
+            this.buttonFontSelect.Text = "Select Font";
+            this.buttonFontSelect.UseVisualStyleBackColor = true;
+            this.buttonFontSelect.Click += new System.EventHandler(this.buttonFontSelect_Click);
+            // 
+            // labelCurrOpacity
+            // 
+            this.labelCurrOpacity.AutoSize = true;
+            this.labelCurrOpacity.Location = new System.Drawing.Point(466, 273);
+            this.labelCurrOpacity.Name = "labelCurrOpacity";
+            this.labelCurrOpacity.Size = new System.Drawing.Size(27, 12);
+            this.labelCurrOpacity.TabIndex = 0;
+            this.labelCurrOpacity.Text = "??%";
+            // 
+            // labelBar
+            // 
+            this.labelBar.AutoSize = true;
+            this.labelBar.Location = new System.Drawing.Point(294, 238);
+            this.labelBar.Name = "labelBar";
+            this.labelBar.Size = new System.Drawing.Size(28, 12);
+            this.labelBar.TabIndex = 2;
+            this.labelBar.Text = "Bar:";
+            this.labelBar.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // labelColumnSize
+            // 
+            this.labelColumnSize.AutoSize = true;
+            this.labelColumnSize.Location = new System.Drawing.Point(10, 238);
+            this.labelColumnSize.Name = "labelColumnSize";
+            this.labelColumnSize.Size = new System.Drawing.Size(83, 12);
+            this.labelColumnSize.TabIndex = 0;
+            this.labelColumnSize.Text = "Column Width";
+            // 
+            // labelTextWidth
+            // 
+            this.labelTextWidth.AutoSize = true;
+            this.labelTextWidth.Location = new System.Drawing.Point(143, 238);
+            this.labelTextWidth.Name = "labelTextWidth";
+            this.labelTextWidth.Size = new System.Drawing.Size(34, 12);
+            this.labelTextWidth.TabIndex = 2;
+            this.labelTextWidth.Text = "Text:";
+            this.labelTextWidth.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // labelFont
+            // 
+            this.labelFont.AutoSize = true;
+            this.labelFont.Location = new System.Drawing.Point(10, 142);
+            this.labelFont.Name = "labelFont";
+            this.labelFont.Size = new System.Drawing.Size(33, 12);
+            this.labelFont.TabIndex = 0;
+            this.labelFont.Text = "Font:";
+            // 
+            // labelOverlayX
+            // 
+            this.labelOverlayX.AutoSize = true;
+            this.labelOverlayX.Location = new System.Drawing.Point(163, 179);
+            this.labelOverlayX.Name = "labelOverlayX";
+            this.labelOverlayX.Size = new System.Drawing.Size(17, 12);
+            this.labelOverlayX.TabIndex = 2;
+            this.labelOverlayX.Text = "X:";
+            // 
+            // udOverlayY
+            // 
+            this.udOverlayY.Location = new System.Drawing.Point(335, 177);
+            this.udOverlayY.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.udOverlayY.Minimum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            -2147483648});
+            this.udOverlayY.Name = "udOverlayY";
+            this.udOverlayY.Size = new System.Drawing.Size(93, 21);
+            this.udOverlayY.TabIndex = 1;
+            this.udOverlayY.Value = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
+            this.udOverlayY.ValueChanged += new System.EventHandler(this.udOverlayY_ValueChanged);
+            // 
+            // udOverlayX
+            // 
+            this.udOverlayX.Location = new System.Drawing.Point(186, 177);
+            this.udOverlayX.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.udOverlayX.Minimum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            -2147483648});
+            this.udOverlayX.Name = "udOverlayX";
+            this.udOverlayX.Size = new System.Drawing.Size(93, 21);
+            this.udOverlayX.TabIndex = 1;
+            this.udOverlayX.Value = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
+            this.udOverlayX.ValueChanged += new System.EventHandler(this.udOverlayX_ValueChanged);
+            // 
+            // udBarWidth
+            // 
+            this.udBarWidth.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.udBarWidth.Location = new System.Drawing.Point(335, 236);
+            this.udBarWidth.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.udBarWidth.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.udBarWidth.Name = "udBarWidth";
+            this.udBarWidth.Size = new System.Drawing.Size(93, 21);
+            this.udBarWidth.TabIndex = 1;
+            this.udBarWidth.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.udBarWidth.ValueChanged += new System.EventHandler(this.udBarWidth_ValueChanged);
+            // 
+            // udNumRows
+            // 
+            this.udNumRows.Location = new System.Drawing.Point(186, 205);
+            this.udNumRows.Name = "udNumRows";
+            this.udNumRows.Size = new System.Drawing.Size(47, 21);
+            this.udNumRows.TabIndex = 1;
+            this.udNumRows.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.udNumRows.ValueChanged += new System.EventHandler(this.udNumRows_ValueChanged);
+            // 
+            // udTextWidth
+            // 
+            this.udTextWidth.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.udTextWidth.Location = new System.Drawing.Point(186, 236);
+            this.udTextWidth.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.udTextWidth.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.udTextWidth.Name = "udTextWidth";
+            this.udTextWidth.Size = new System.Drawing.Size(93, 21);
+            this.udTextWidth.TabIndex = 1;
+            this.udTextWidth.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.udTextWidth.ValueChanged += new System.EventHandler(this.udTextWidth_ValueChanged);
             // 
             // ACTTabPageControl
             // 
@@ -715,13 +718,6 @@
             this.Controls.Add(this.tabControlExt1);
             this.Name = "ACTTabPageControl";
             this.Size = new System.Drawing.Size(982, 632);
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarOpacity)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.udOverlayY)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.udBarWidth)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.udTextWidth)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.udNumRows)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.udOverlayX)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar)).EndInit();
             this.tabControlExt1.ResumeLayout(false);
             this.tabMain.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -729,10 +725,17 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabOption.ResumeLayout(false);
             this.tabOption.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarOpacity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.udOverlayY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.udOverlayX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.udBarWidth)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.udNumRows)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.udTextWidth)).EndInit();
             this.ResumeLayout(false);
 
         }
