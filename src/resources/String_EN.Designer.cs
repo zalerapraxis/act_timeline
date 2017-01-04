@@ -61,6 +61,16 @@ namespace ACTTimeline.resources {
         }
         
         /// <summary>
+        ///   Please Select Resource Directory
+        ///( select directory include &quot;/timeline&quot; and &quot;/wav&quot;)과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string _LN_PleaseSelectResDir {
+            get {
+                return ResourceManager.GetString("_LN_PleaseSelectResDir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Plugin Started과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         public static string _LN_PluginStarted {
@@ -70,11 +80,65 @@ namespace ACTTimeline.resources {
         }
         
         /// <summary>
+        ///   Found Resource Dir! 과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string _LN_ResFound {
+            get {
+                return ResourceManager.GetString("_LN_ResFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Resources Not Found :/과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string _LN_ResNotFound {
+            get {
+                return ResourceManager.GetString("_LN_ResNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   ACT Timeline과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         public static string _LN_Tabname {
             get {
                 return ResourceManager.GetString("_LN_Tabname", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///    Found {0} timeline txt files.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string _LN_TimelineFound {
+            get {
+                return ResourceManager.GetString("_LN_TimelineFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///    Timeline txt files dir not found!과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string _LN_TimelineNotFound {
+            get {
+                return ResourceManager.GetString("_LN_TimelineNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///    Found {0} Sound Files.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string _LN_WavFound {
+            get {
+                return ResourceManager.GetString("_LN_WavFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///    Sound files dir not found!과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string _LN_WavNotFound {
+            get {
+                return ResourceManager.GetString("_LN_WavNotFound", resourceCulture);
             }
         }
         

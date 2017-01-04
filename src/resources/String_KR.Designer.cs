@@ -61,6 +61,16 @@ namespace ACTTimeline.resources {
         }
         
         /// <summary>
+        ///   리소스 디렉토리를 선택하세요
+        ///(선택한 폴더 아래에 &quot;/timeline&quot;폴더와 &quot;/wav&quot;폴더가 있어야 합니다.)과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string _LN_PleaseSelectResDir {
+            get {
+                return ResourceManager.GetString("_LN_PleaseSelectResDir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   플러그인이 정상적으로 시작되었습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string _LN_PluginStarted {
@@ -70,11 +80,65 @@ namespace ACTTimeline.resources {
         }
         
         /// <summary>
+        ///   리소스 디렉토리 찾음! 과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string _LN_ResFound {
+            get {
+                return ResourceManager.GetString("_LN_ResFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   리소스를 찾을 수 없어요 ㅠㅁC과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string _LN_ResNotFound {
+            get {
+                return ResourceManager.GetString("_LN_ResNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   ACT 타임라인과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string _LN_Tabname {
             get {
                 return ResourceManager.GetString("_LN_Tabname", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///    {0}개의 타임라인 파일을 찾았습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string _LN_TimelineFound {
+            get {
+                return ResourceManager.GetString("_LN_TimelineFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///    타임라인 폴더를 찾을 수 없습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string _LN_TimelineNotFound {
+            get {
+                return ResourceManager.GetString("_LN_TimelineNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///    {0}개의 사운드 파일을 찾았습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string _LN_WavFound {
+            get {
+                return ResourceManager.GetString("_LN_WavFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///    사운드 폴더를 찾을 수 없습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string _LN_WavNotFound {
+            get {
+                return ResourceManager.GetString("_LN_WavNotFound", resourceCulture);
             }
         }
         
@@ -255,6 +319,33 @@ namespace ACTTimeline.resources {
         internal static string labelResourceDir {
             get {
                 return ResourceManager.GetString("labelResourceDir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   타임라인 컨트롤과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string lblCtrl {
+            get {
+                return ResourceManager.GetString("lblCtrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   타임라인 정보과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string lblInfo {
+            get {
+                return ResourceManager.GetString("lblInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   타임라인 목록과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string lblList {
+            get {
+                return ResourceManager.GetString("lblList", resourceCulture);
             }
         }
         

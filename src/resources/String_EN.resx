@@ -189,4 +189,26 @@
   <data name="_LN_Tabname" xml:space="preserve">
     <value>ACT Timeline</value>
   </data>
+  <data name="_LN_PleaseSelectResDir" xml:space="preserve">
+    <value>Please Select Resource Directory
+( select directory include "/timeline" and "/wav")</value>
+  </data>
+  <data name="_LN_ResFound" xml:space="preserve">
+    <value>Found Resource Dir! </value>
+  </data>
+  <data name="_LN_ResNotFound" xml:space="preserve">
+    <value>Resources Not Found :/</value>
+  </data>
+  <data name="_LN_TimelineFound" xml:space="preserve">
+    <value> Found {0} timeline txt files.</value>
+  </data>
+  <data name="_LN_TimelineNotFound" xml:space="preserve">
+    <value> Timeline txt files dir not found!</value>
+  </data>
+  <data name="_LN_WavFound" xml:space="preserve">
+    <value> Found {0} Sound Files.</value>
+  </data>
+  <data name="_LN_WavNotFound" xml:space="preserve">
+    <value> Sound files dir not found!</value>
+  </data>
 </root>

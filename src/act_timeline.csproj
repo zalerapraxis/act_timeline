@@ -129,12 +129,6 @@
     <Compile Include="Win32APIUtils.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ACTTabPageControl.ko-KR.resx">
-      <DependentUpon>ACTTabPageControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ACTTabPageControl.ko.resx">
-      <DependentUpon>ACTTabPageControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ACTTabPageControl.resx">
       <DependentUpon>ACTTabPageControl.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -194,11 +188,9 @@
     </Reference>
     <Reference Include="Sprache, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Sprache.2.1.0\lib\net40\Sprache.dll</HintPath>
-      <Private>False</Private>
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Sprache">
-      <HintPath>packages\Sprache.1.10.0.36\lib\net40\Sprache.dll</HintPath>
+      <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />

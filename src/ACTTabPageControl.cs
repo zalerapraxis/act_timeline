@@ -130,9 +130,13 @@ namespace ACTTimeline
         private void buttonResourceDirSelect_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
-            DialogResult result = folderBrowserDialog.ShowDialog();
+            folderBrowserDialog.Description = Translator.Get("_LN_PleaseSelectResDir");
 
-            textBoxResourceDir.Text = folderBrowserDialog.SelectedPath;
+            // if canceled does not setting empty directory
+            if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+            {
+                textBoxResourceDir.Text = folderBrowserDialog.SelectedPath;
+            }
         }
 
         private void textBoxResourceDir_TextChanged(object sender, EventArgs e)
@@ -144,25 +148,23 @@ namespace ACTTimeline
         private string GenerateDirStatusString()
         {
             if (!Directory.Exists(Globals.ResourceRoot))
-            {
-                return "Resource dir not found :/";
-            }
+                return Translator.Get("_LN_ResNotFound");
 
-            string statusText = "Resource dir exists! ";
+            string statusText = Translator.Get("_LN_ResFound");
 
+            //"Sound files dir not found!";
             if (!Directory.Exists(Globals.SoundFilesRoot))
-            {
-                statusText += "Sound files dir not found!";
-                return statusText;
-            }
-            statusText += String.Format("Found {0} sound files. ", Globals.NumberOfSoundFilesInResourcesDir());
-            
+                statusText += Translator.Get("_LN_WavNotFound"); 
+            // "Found {0} sound files. "
+            else
+                statusText += string.Format(Translator.Get("_LN_WavFound"), Globals.NumberOfSoundFilesInResourcesDir());
+
+            // "Timeline txt files dir not found!"
             if (!Directory.Exists(Globals.TimelineTxtsRoot))
-            {
-                statusText += "Timeline txt files dir not found!";
-                return statusText;
-            }
-            statusText += String.Format("Found {0} timeline txt files.", Globals.TimelineTxtsInResourcesDir.Length);
+                statusText += Translator.Get("_LN_TimelineNotFound");
+            // "Found {0} timeline txt files."
+            else
+                statusText += string.Format(Translator.Get("_LN_TimelineFound"), Globals.TimelineTxtsInResourcesDir.Length);
 
             return statusText;
         }
@@ -170,13 +172,30 @@ namespace ACTTimeline
         private void Synchronize()
         {
             labelResourceDirStatus.Text = GenerateDirStatusString();
-            
+
             // update timeline list
-            listTimelines.Items.Clear();
+            ListItems.Controls.Clear();
             foreach (string fullpath in Globals.TimelineTxtsInResourcesDir)
             {
-                listTimelines.Items.Add(Path.GetFileName(fullpath));
+                CheckBox btn = new CheckBox();
+                btn.Text = Path.GetFileName(fullpath);
+                btn.Appearance = Appearance.Button;
+                btn.Click += Btn_CheckedChanged;
+                btn.Dock = DockStyle.Top;
+                ListItems.Controls.Add(btn);
             }
+        }
+
+        private void Btn_CheckedChanged(object sender, EventArgs e)
+        {
+            foreach(Control c in ListItems.Controls)
+            {
+                ((CheckBox)c).Checked = false;
+            }
+
+            ((CheckBox)sender).Checked = true;
+            string timelineTxtFilePath = ((CheckBox)sender).Text;
+            plugin.Controller.TimelineTxtFilePath = string.Format("{0}/{1}", Globals.TimelineTxtsRoot, timelineTxtFilePath);
         }
 
         private void buttonResourceDirOpen_Click(object sender, EventArgs e)
@@ -190,9 +209,19 @@ namespace ACTTimeline
             Synchronize();
         }
 
+        private string getSelectedItem()
+        {
+            foreach(Control c in ListItems.Controls)
+            {
+                if (((CheckBox)c).Checked)
+                    return c.Text;
+            }
+            return "";
+        }
+
         private void buttonLoad_Click(object sender, EventArgs e)
         {
-            string timelineTxtFilePath = (string)listTimelines.SelectedItem;
+            string timelineTxtFilePath = getSelectedItem();
             plugin.Controller.TimelineTxtFilePath = String.Format("{0}/{1}", Globals.TimelineTxtsRoot, timelineTxtFilePath);
         }
 
@@ -245,7 +274,7 @@ namespace ACTTimeline
 
         private void TimelineView_TimelineFontChanged(object sender, EventArgs e)
         {
-            labelCurrentFont.Text = plugin.FontString;
+            buttonFontSelect.Text = plugin.FontString;
         }
 
         private void buttonFontSelect_Click(object sender, EventArgs e)
@@ -304,6 +333,11 @@ namespace ACTTimeline
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             plugin.AutoHide = this.checkBoxAutohide.Checked;
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

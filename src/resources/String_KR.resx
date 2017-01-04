@@ -189,4 +189,35 @@
   <data name="_LN_Tabname" xml:space="preserve">
     <value>ACT 타임라인</value>
   </data>
+  <data name="lblCtrl" xml:space="preserve">
+    <value>타임라인 컨트롤</value>
+  </data>
+  <data name="lblInfo" xml:space="preserve">
+    <value>타임라인 정보</value>
+  </data>
+  <data name="lblList" xml:space="preserve">
+    <value>타임라인 목록</value>
+  </data>
+  <data name="_LN_PleaseSelectResDir" xml:space="preserve">
+    <value>리소스 디렉토리를 선택하세요
+(선택한 폴더 아래에 "/timeline"폴더와 "/wav"폴더가 있어야 합니다.)</value>
+  </data>
+  <data name="_LN_ResFound" xml:space="preserve">
+    <value>리소스 디렉토리 찾음! </value>
+  </data>
+  <data name="_LN_ResNotFound" xml:space="preserve">
+    <value>리소스를 찾을 수 없어요 ㅠㅁC</value>
+  </data>
+  <data name="_LN_TimelineFound" xml:space="preserve">
+    <value> {0}개의 타임라인 파일을 찾았습니다.</value>
+  </data>
+  <data name="_LN_TimelineNotFound" xml:space="preserve">
+    <value> 타임라인 폴더를 찾을 수 없습니다.</value>
+  </data>
+  <data name="_LN_WavFound" xml:space="preserve">
+    <value> {0}개의 사운드 파일을 찾았습니다.</value>
+  </data>
+  <data name="_LN_WavNotFound" xml:space="preserve">
+    <value> 사운드 폴더를 찾을 수 없습니다.</value>
+  </data>
 </root>

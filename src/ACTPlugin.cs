@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using System.Linq;
 
 namespace ACTTimeline
 {
@@ -70,10 +71,43 @@ namespace ACTTimeline
             // See |InitPlugin()|
         }
 
+        private string GetPluginDirectory()
+        {
+            var plugin = ActGlobals.oFormActMain.ActPlugins.Where(x => x.pluginObj == this).FirstOrDefault();
+            if (plugin != null)
+            {
+                return Path.GetDirectoryName(plugin.pluginFile.FullName);
+            }
+            else
+            {
+                throw new Exception();
+            }
+        }
+
+        public static string[] ASMCHK = new string[] { "Sprache" };
+
         public void InitPlugin(TabPage pluginScreenSpace, Label pluginStatusText)
         {
             try
             {
+                AppDomain.CurrentDomain.AssemblyResolve += delegate (object sender, ResolveEventArgs args)
+                {
+                    string asmFile = (args.Name.Contains(",") ? args.Name.Substring(0, args.Name.IndexOf(",")) : args.Name);
+
+                    if (!ASMCHK.Contains(asmFile))
+                    {
+                        return null;
+                    }
+
+                    try
+                    {
+                        return Assembly.LoadFile(Path.Combine(GetPluginDirectory(), asmFile + ".dll"));
+                    }
+                    catch
+                    {
+                        return null;
+                    }
+                };
                 // DI log writer
                 Globals.WriteLogImpl = (str) => { ActGlobals.oFormActMain.WriteInfoLog(String.Format("act_timeline: {0}", str)); };
 
