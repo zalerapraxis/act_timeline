@@ -1,10 +1,10 @@
-﻿using Advanced_Combat_Tracker;
-using System;
+﻿using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
+using Advanced_Combat_Tracker;
 
 namespace ACTTimeline
 {
@@ -116,6 +116,7 @@ namespace ACTTimeline
             if (OpacityChanged != null)
                 OpacityChanged(this, EventArgs.Empty);
         }
+
 
         private bool playSoundByACT;
         public bool PlaySoundByACT
@@ -264,6 +265,9 @@ namespace ACTTimeline
 
         private void WarmUpSoundPlayerCache()
         {
+            if (controller.Timeline == null)
+                return;
+
             if (playSoundByACT)
                 return;
 
@@ -290,7 +294,16 @@ namespace ACTTimeline
                 var pendingAlerts = timeline.PendingAlertsAt(controller.CurrentTime);
                 foreach (ActivityAlert pendingAlert in pendingAlerts)
                 {
-                    ProcessAlert(pendingAlert);
+                    if (pendingAlert.Sound != null)
+                    {
+                        soundplayer.PlaySound(pendingAlert.Sound.Filename);
+                    }
+                    if (pendingAlert.TtsSpeaker != null &&
+                        !string.IsNullOrWhiteSpace(pendingAlert.TtsSentence))
+                    {
+                        pendingAlert.TtsSpeaker.Synthesizer.SpeakAsync(pendingAlert.TtsSentence);
+                    }
+                    pendingAlert.Processed = true;
                 }
 
                 // sync dataGridView
@@ -301,10 +314,17 @@ namespace ACTTimeline
 
         void ProcessAlert(ActivityAlert alert)
         {
-            if (PlaySoundByACT)
+            //TTSクラスならACT本体に読み上げさせる
+            if (alert.Sound is AlertTTS)
+            {
+                ActGlobals.oFormActMain.TTS(alert.Sound.Filename);
+            }
+            else if (PlaySoundByACT)
             {
                 ActGlobals.oFormActMain.PlaySoundMethod(alert.Sound.Filename, 100);
-            } else {
+            } 
+            else 
+            {
                 soundplayer.PlaySound(alert.Sound.Filename);
             }
 

@@ -6,6 +6,9 @@ using System.Globalization;
 using System.Reflection;
 using System.Threading;
 using System.Windows.Forms;
+using System.IO;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 namespace ACTTimeline
 {
@@ -20,7 +23,13 @@ namespace ACTTimeline
 
         private ACTTabPageControl tabPageControl;
         public TimelineView TimelineView { get; private set; }
+        public TimelineAutoLoader TimelineAutoLoader { get; private set; }
         private CheckBox checkBoxShowView;
+        private VisibilityControl visibilityControl;
+
+        private System.Threading.Timer xivWindowTimer;
+
+        public bool AutoHide { get; set; }
 
         #region delegates for PluginSettings
 
@@ -86,8 +95,13 @@ namespace ACTTimeline
                 Controller = new TimelineController();
 
                 TimelineView = new TimelineView(Controller);
-                TimelineView.Show();
                 TimelineView.DoubleClick += TimelineView_DoubleClick;
+
+                visibilityControl = new VisibilityControl(TimelineView);
+                visibilityControl.Visible = true;
+
+                TimelineAutoLoader = new TimelineAutoLoader(Controller);
+                TimelineAutoLoader.Start();
 
                 Settings = new PluginSettings(this);
                 Settings.AddStringSetting("TimelineTxtFilePath");
@@ -104,6 +118,36 @@ namespace ACTTimeline
                 SetupUpdateChecker();
 
                 StatusText.Text = Translator.Get("_LN_PluginStarted");
+
+                xivWindowTimer = new System.Threading.Timer(e => {
+                    try
+                    {
+                        if (this.AutoHide)
+                        {
+                            uint pid;
+                            var hWndFg = NativeMethods.GetForegroundWindow();
+                            if (hWndFg == IntPtr.Zero)
+                            {
+                                return;
+                            }
+                            NativeMethods.GetWindowThreadProcessId(hWndFg, out pid);
+                            var exePath = Process.GetProcessById((int)pid).MainModule.FileName;
+
+                            if (Path.GetFileName(exePath) == "ffxiv.exe" ||
+                                Path.GetFileName(exePath) == "ffxiv_dx11.exe")
+                            {
+                                this.TimelineView.Invoke(new Action(() => this.TimelineView.Visible = true));
+                            }
+                            else
+                            {
+                                this.TimelineView.Invoke(new Action(() => this.TimelineView.Visible = false));
+                            }
+                        }
+                    }
+                    catch
+                    {
+                    }
+                });
             }
             catch(Exception e)
             {
@@ -114,7 +158,7 @@ namespace ACTTimeline
 
         void TimelineView_DoubleClick(object sender, EventArgs e)
         {
-            TimelineView.Hide();
+            visibilityControl.Visible = false;
             checkBoxShowView.Checked = false;
         }
 
@@ -141,10 +185,7 @@ namespace ACTTimeline
 
         void checkBoxShowView_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBoxShowView.Checked)
-                TimelineView.Show();
-            else
-                TimelineView.Hide();
+            visibilityControl.Visible = checkBoxShowView.Checked;
         }
 
         void formMain_Resize(object sender, EventArgs e)
@@ -191,8 +232,14 @@ namespace ACTTimeline
             if (checkBoxShowView != null)
                 ActGlobals.oFormActMain.Controls.Remove(checkBoxShowView);
 
+            if (TimelineAutoLoader != null)
+                TimelineAutoLoader.Stop();
+
             if (Settings != null)
                 Settings.Save();
+
+            if (visibilityControl != null)
+                visibilityControl.Close();
 
             if (TimelineView != null)
                 TimelineView.Close();
@@ -204,6 +251,15 @@ namespace ACTTimeline
 
             if (StatusText != null)
                 StatusText.Text = "Plugin Exited m(_ _)m";
+        }
+
+        static class NativeMethods
+        {
+            [DllImport("user32.dll", SetLastError = true)]
+            public static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint lpdwProcessId);
+
+            [DllImport("user32.dll")]
+            public static extern IntPtr GetForegroundWindow();
         }
     }
 }

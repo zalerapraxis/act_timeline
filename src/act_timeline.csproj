@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ACTTimeline</RootNamespace>
     <AssemblyName>BindingCoil.ACTTimeline</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
     <IsWebBootstrapper>false</IsWebBootstrapper>
@@ -37,6 +37,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,6 +47,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>
@@ -56,18 +58,20 @@
     <OutputPath>E:\Advanced Combat Tracker\Plugins\ACT.Timeline\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <OutputPath>E:\Advanced Combat Tracker\Plugins\ACT.Timeline\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -84,6 +88,7 @@
     <Compile Include="Globals.cs" />
     <Compile Include="3rdparty\IntervalTree.cs" />
     <Compile Include="Language.cs" />
+    <Compile Include="SynthesizerWrapper.cs" />
     <Compile Include="Model.cs" />
     <Compile Include="OverlayButtonsForm.cs">
       <SubType>Form</SubType>
@@ -112,12 +117,15 @@
     <Compile Include="TabControlExt.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="TimelineAutoLoader.cs" />
     <Compile Include="TimelineController.cs" />
     <Compile Include="TimelineLoader.cs" />
     <Compile Include="TimelineView.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TtsSpeaker.cs" />
     <Compile Include="UpdateChecker.cs" />
+    <Compile Include="VisibilityControl.cs" />
     <Compile Include="Win32APIUtils.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -177,6 +185,7 @@
   <ItemGroup>
     <Reference Include="Advanced Combat Tracker">
       <HintPath>E:\Advanced Combat Tracker\Advanced Combat Tracker.exe</HintPath>
+      <HintPath>3rdparty\Advanced Combat Tracker.exe</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="LibZ.Bootstrap, Version=1.2.0.0, Culture=neutral, PublicKeyToken=62360e53307d6ba2, processorArchitecture=MSIL">
@@ -186,6 +195,9 @@
     <Reference Include="Sprache, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Sprache.2.1.0\lib\net40\Sprache.dll</HintPath>
       <Private>False</Private>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Sprache">
+      <HintPath>packages\Sprache.1.10.0.36\lib\net40\Sprache.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
@@ -193,8 +205,10 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Speech" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.XML" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
