@@ -8,6 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
+using System.Globalization;
+using System.Threading;
 
 namespace ACTTimeline
 {
@@ -16,9 +18,30 @@ namespace ACTTimeline
         private ACTPlugin plugin;
         private bool updateFromOverlayMove;
 
+        public void languagePatch(ControlCollection ctrl)
+        {
+            foreach (Control c in ctrl)
+            {
+                if (CultureInfo.InstalledUICulture.Name == "ko-KR")
+                {
+                    c.Font = new Font("맑은 고딕", 9F, FontStyle.Regular);
+                }
+                c.Text = Translator.Get(c.Name) == c.Name ? c.Text : Translator.Get(c.Name);
+                if (c.HasChildren)
+                {
+                    if (c.Controls != null)
+                    {
+                        languagePatch(c.Controls);
+                    }
+                }
+            }
+        }
+
         public ACTTabPageControl(ACTPlugin plugin_)
         {
             InitializeComponent();
+
+            languagePatch(Controls);
 
             plugin = plugin_;
             updateFromOverlayMove = false;

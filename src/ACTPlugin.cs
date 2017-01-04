@@ -2,6 +2,7 @@
 using System;
 using System.ComponentModel;
 using System.Drawing;
+using System.Globalization;
 using System.Reflection;
 using System.Threading;
 using System.Windows.Forms;
@@ -102,7 +103,7 @@ namespace ACTTimeline
 
                 SetupUpdateChecker();
 
-                StatusText.Text = "Plugin Started (^^)!";
+                StatusText.Text = Translator.Get("_LN_PluginStarted");
             }
             catch(Exception e)
             {
@@ -155,7 +156,7 @@ namespace ACTTimeline
 
         void SetupTab()
         {
-            ScreenSpace.Text = "ACT Timeline";
+            ScreenSpace.Text = Translator.Get("_LN_Tabname");
 
             tabPageControl = new ACTTabPageControl(this);
             ScreenSpace.Controls.Add(tabPageControl);
