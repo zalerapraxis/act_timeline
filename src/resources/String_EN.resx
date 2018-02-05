@@ -187,7 +187,7 @@
     <value>Plugin Started</value>
   </data>
   <data name="_LN_Tabname" xml:space="preserve">
-    <value>ACT Timeline</value>
+    <value>ACT CD Timeline</value>
   </data>
   <data name="_LN_PleaseSelectResDir" xml:space="preserve">
     <value>Please Select Resource Directory
@@ -212,6 +212,6 @@
     <value> Sound files dir not found!</value>
   </data>
   <data name="_LN_ShowTimeline" xml:space="preserve">
-    <value>Show Timeline</value>
+    <value>Show CD Timeline</value>
   </data>
 </root>

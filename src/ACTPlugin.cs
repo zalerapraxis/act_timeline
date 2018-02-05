@@ -201,7 +201,7 @@ namespace ACTTimeline
             checkBoxShowView = new CheckBox();
             checkBoxShowView.Appearance = System.Windows.Forms.Appearance.Button;
             checkBoxShowView.Name = "checkBoxShowView";
-            checkBoxShowView.Size = new System.Drawing.Size(90, 24);
+            checkBoxShowView.Size = new System.Drawing.Size(120, 24);
             checkBoxShowView.Text = Translator.Get("_LN_ShowTimeline"); //"Show Timeline";
             checkBoxShowView.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             checkBoxShowView.UseVisualStyleBackColor = true;
@@ -226,7 +226,7 @@ namespace ACTTimeline
         {
             // update button location
             var mainFormSize = ActGlobals.oFormActMain.Size;
-            checkBoxShowView.Location = new Point(mainFormSize.Width - 435, 0);
+            checkBoxShowView.Location = new Point(mainFormSize.Width - 565, 0);
         }
 
         void SetupTab()
