@@ -1,8 +1,11 @@
-### 改造版
-* エリア移動後にZone名のファイルを自動読み込み
-* タイムラインの構文にsyncに連動して時間移動できるjumpの追加
-* sync /END/ jump 0 で初期位置にリセットできるように
-* "tts TTSで読み上げ"
+### My mod
+* Separate config from normal plugin, so two copies can be used at the same time
+
+### Laiglinne mods
+* Auto-load file of the zone name when loading in
+* Added jump command
+* sync /END/ jump 0 - so the script can be reset
+* TTS (?)
 
 act_timeline
 ============
